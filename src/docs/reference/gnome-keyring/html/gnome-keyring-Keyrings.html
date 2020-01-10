@@ -3,12 +3,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Keyrings</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<meta name="generator" content="DocBook XSL Stylesheets V1.77.1">
 <link rel="home" href="index.html" title="gnome-keyring Reference Manual">
 <link rel="up" href="ch01.html" title="gnome-keyring API Reference">
 <link rel="prev" href="gnome-keyring-Simple-Password-Storage.html" title="Simple Password Storage">
 <link rel="next" href="gnome-keyring-Keyring-Info.html" title="Keyring Info">
-<meta name="generator" content="GTK-Doc V1.19 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -118,14 +118,6 @@
 <div class="refsect1">
 <a name="gnome-keyring-Keyrings.description"></a><h2>Description</h2>
 <p>
-</p>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>All of these APIs are deprecated. Use
-<a class="ulink" href="" target="_top">libsecret</a>
-instead.</div>
-<p>
-</p>
-<p>
 <code class="code">gnome-keyring-daemon</code> manages multiple keyrings. Each keyring can
 store one or more items containing secrets.
 </p>
@@ -147,10 +139,6 @@ keyring.
                                                         (<em class="parameter"><code><a class="link" href="gnome-keyring-Result-Codes.html#GnomeKeyringResult" title="enum GnomeKeyringResult"><span class="type">GnomeKeyringResult</span></a> result</code></em>,
                                                          <em class="parameter"><code><a class="link" href="gnome-keyring-Keyring-Info.html#GnomeKeyringInfo" title="GnomeKeyringInfo"><span class="type">GnomeKeyringInfo</span></a> *info</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">GnomeKeyringOperationGetKeyringInfoCallback</code> is deprecated and should not be used in newly-written code.</p>
-</div>
 <p>
 </p>
 </div>
@@ -161,10 +149,6 @@ keyring.
                                                          <em class="parameter"><code><a class="link" href="gnome-keyring-Callbacks.html#GnomeKeyringOperationDoneCallback" title="GnomeKeyringOperationDoneCallback ()"><span class="type">GnomeKeyringOperationDoneCallback</span></a> callback</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> data</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> destroy_data</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_set_default_keyring</code> is deprecated and should not be used in newly-written code. Use <code class="function">secret_service_set_alias()</code> instead.</p>
-</div>
 <p>
 Change the default keyring.
 </p>
@@ -209,10 +193,6 @@ to <a class="link" href="gnome-keyring-Miscellaneous-Functions.html#gnome-keyrin
 <a name="gnome-keyring-set-default-keyring-sync"></a><h3>gnome_keyring_set_default_keyring_sync ()</h3>
 <pre class="programlisting"><a class="link" href="gnome-keyring-Result-Codes.html#GnomeKeyringResult" title="enum GnomeKeyringResult"><span class="returnvalue">GnomeKeyringResult</span></a>  gnome_keyring_set_default_keyring_sync
                                                         (<em class="parameter"><code>const <span class="type">char</span> *keyring</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_set_default_keyring_sync</code> is deprecated and should not be used in newly-written code. Use <code class="function">secret_service_set_alias_sync()</code> instead.</p>
-</div>
 <p>
 Change the default keyring.
 </p>
@@ -244,10 +224,6 @@ an error result otherwise.</td>
 <pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>            gnome_keyring_get_default_keyring   (<em class="parameter"><code><a class="link" href="gnome-keyring-Callbacks.html#GnomeKeyringOperationGetStringCallback" title="GnomeKeyringOperationGetStringCallback ()"><span class="type">GnomeKeyringOperationGetStringCallback</span></a> callback</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> data</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> destroy_data</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_get_default_keyring</code> is deprecated and should not be used in newly-written code. Use <code class="function">secret_collection_for_alias()</code> instead.</p>
-</div>
 <p>
 Get the default keyring name, which will be passed to the <em class="parameter"><code>callback</code></em>. If no
 default keyring exists, then <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> will be passed to the <em class="parameter"><code>callback</code></em>. The
@@ -290,10 +266,6 @@ to <a class="link" href="gnome-keyring-Miscellaneous-Functions.html#gnome-keyrin
 <a name="gnome-keyring-get-default-keyring-sync"></a><h3>gnome_keyring_get_default_keyring_sync ()</h3>
 <pre class="programlisting"><a class="link" href="gnome-keyring-Result-Codes.html#GnomeKeyringResult" title="enum GnomeKeyringResult"><span class="returnvalue">GnomeKeyringResult</span></a>  gnome_keyring_get_default_keyring_sync
                                                         (<em class="parameter"><code><span class="type">char</span> **keyring</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_get_default_keyring_sync</code> is deprecated and should not be used in newly-written code. Use <code class="function">secret_collection_for_alias_sync()</code> instead.</p>
-</div>
 <p>
 Get the default keyring name.
 </p>
@@ -329,10 +301,6 @@ an error result otherwise.</td>
 <pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>            gnome_keyring_list_keyring_names    (<em class="parameter"><code><a class="link" href="gnome-keyring-Callbacks.html#GnomeKeyringOperationGetListCallback" title="GnomeKeyringOperationGetListCallback ()"><span class="type">GnomeKeyringOperationGetListCallback</span></a> callback</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> data</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> destroy_data</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_list_keyring_names</code> is deprecated and should not be used in newly-written code. Use <code class="function">secret_service_get_collections()</code> instead.</p>
-</div>
 <p>
 Get a list of keyring names.
 </p>
@@ -378,10 +346,6 @@ to <a class="link" href="gnome-keyring-Miscellaneous-Functions.html#gnome-keyrin
 <a name="gnome-keyring-list-keyring-names-sync"></a><h3>gnome_keyring_list_keyring_names_sync ()</h3>
 <pre class="programlisting"><a class="link" href="gnome-keyring-Result-Codes.html#GnomeKeyringResult" title="enum GnomeKeyringResult"><span class="returnvalue">GnomeKeyringResult</span></a>  gnome_keyring_list_keyring_names_sync
                                                         (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> **keyrings</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_list_keyring_names_sync</code> is deprecated and should not be used in newly-written code. Use <code class="function">secret_service_get_collections()</code> instead.</p>
-</div>
 <p>
 Get a list of keyring names.
 </p>
@@ -418,10 +382,6 @@ an error result otherwise.</td>
 <pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>            gnome_keyring_lock_all              (<em class="parameter"><code><a class="link" href="gnome-keyring-Callbacks.html#GnomeKeyringOperationDoneCallback" title="GnomeKeyringOperationDoneCallback ()"><span class="type">GnomeKeyringOperationDoneCallback</span></a> callback</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> data</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> destroy_data</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_lock_all</code> is deprecated and should not be used in newly-written code. Use libsecret instead.</p>
-</div>
 <p>
 Lock all the keyrings, so that their contents may not be accessed without
 first unlocking them with a password.
@@ -462,10 +422,6 @@ to <a class="link" href="gnome-keyring-Miscellaneous-Functions.html#gnome-keyrin
 <div class="refsect2">
 <a name="gnome-keyring-lock-all-sync"></a><h3>gnome_keyring_lock_all_sync ()</h3>
 <pre class="programlisting"><a class="link" href="gnome-keyring-Result-Codes.html#GnomeKeyringResult" title="enum GnomeKeyringResult"><span class="returnvalue">GnomeKeyringResult</span></a>  gnome_keyring_lock_all_sync         (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_lock_all_sync</code> is deprecated and should not be used in newly-written code. Use libsecret instead.</p>
-</div>
 <p>
 Lock all the keyrings, so that their contents may not eb accessed without
 first unlocking them with a password.
@@ -494,10 +450,6 @@ an error result otherwise.</td>
                                                          <em class="parameter"><code><a class="link" href="gnome-keyring-Callbacks.html#GnomeKeyringOperationDoneCallback" title="GnomeKeyringOperationDoneCallback ()"><span class="type">GnomeKeyringOperationDoneCallback</span></a> callback</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> data</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> destroy_data</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_create</code> is deprecated and should not be used in newly-written code. Use <code class="function">secret_collection_create()</code> instead.</p>
-</div>
 <p>
 Create a new keyring with the specified name. In most cases <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> will be
 passed as the <em class="parameter"><code>password</code></em>, which will prompt the user to enter a password
@@ -550,10 +502,6 @@ to <a class="link" href="gnome-keyring-Miscellaneous-Functions.html#gnome-keyrin
 <a name="gnome-keyring-create-sync"></a><h3>gnome_keyring_create_sync ()</h3>
 <pre class="programlisting"><a class="link" href="gnome-keyring-Result-Codes.html#GnomeKeyringResult" title="enum GnomeKeyringResult"><span class="returnvalue">GnomeKeyringResult</span></a>  gnome_keyring_create_sync           (<em class="parameter"><code>const <span class="type">char</span> *keyring_name</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *password</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_create_sync</code> is deprecated and should not be used in newly-written code. Use <code class="function">secret_collection_create_sync()</code> instead.</p>
-</div>
 <p>
 Create a new keyring with the specified name. In most cases <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> will be
 passed in as the <em class="parameter"><code>password</code></em>, which will prompt the user to enter a password
@@ -596,10 +544,6 @@ an error result otherwise.</td>
                                                          <em class="parameter"><code><a class="link" href="gnome-keyring-Callbacks.html#GnomeKeyringOperationDoneCallback" title="GnomeKeyringOperationDoneCallback ()"><span class="type">GnomeKeyringOperationDoneCallback</span></a> callback</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> data</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> destroy_data</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_unlock</code> is deprecated and should not be used in newly-written code. Use <code class="function">secret_service_unlock()</code> instead.</p>
-</div>
 <p>
 Unlock a <em class="parameter"><code>keyring</code></em>, so that its contents may be accessed. In most cases <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>
 will be passed as the <em class="parameter"><code>password</code></em>, which will prompt the user to enter the
@@ -658,10 +602,6 @@ to <a class="link" href="gnome-keyring-Miscellaneous-Functions.html#gnome-keyrin
 <a name="gnome-keyring-unlock-sync"></a><h3>gnome_keyring_unlock_sync ()</h3>
 <pre class="programlisting"><a class="link" href="gnome-keyring-Result-Codes.html#GnomeKeyringResult" title="enum GnomeKeyringResult"><span class="returnvalue">GnomeKeyringResult</span></a>  gnome_keyring_unlock_sync           (<em class="parameter"><code>const <span class="type">char</span> *keyring</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *password</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_unlock_sync</code> is deprecated and should not be used in newly-written code. Use <code class="function">secret_service_unlock_sync()</code> instead.</p>
-</div>
 <p>
 Unlock a <em class="parameter"><code>keyring</code></em>, so that its contents may be accessed. In most cases <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>
 will be passed in as the <em class="parameter"><code>password</code></em>, which will prompt the user to enter the
@@ -708,10 +648,6 @@ an error result otherwise.</td>
                                                          <em class="parameter"><code><a class="link" href="gnome-keyring-Callbacks.html#GnomeKeyringOperationDoneCallback" title="GnomeKeyringOperationDoneCallback ()"><span class="type">GnomeKeyringOperationDoneCallback</span></a> callback</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> data</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> destroy_data</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_lock</code> is deprecated and should not be used in newly-written code. Use <code class="function">secret_service_lock()</code> instead.</p>
-</div>
 <p>
 Lock a <em class="parameter"><code>keyring</code></em>, so that its contents may not be accessed without first
 supplying a password.
@@ -762,10 +698,6 @@ to <a class="link" href="gnome-keyring-Miscellaneous-Functions.html#gnome-keyrin
 <div class="refsect2">
 <a name="gnome-keyring-lock-sync"></a><h3>gnome_keyring_lock_sync ()</h3>
 <pre class="programlisting"><a class="link" href="gnome-keyring-Result-Codes.html#GnomeKeyringResult" title="enum GnomeKeyringResult"><span class="returnvalue">GnomeKeyringResult</span></a>  gnome_keyring_lock_sync             (<em class="parameter"><code>const <span class="type">char</span> *keyring</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_lock_sync</code> is deprecated and should not be used in newly-written code. Use <code class="function">secret_service_lock_sync()</code> instead.</p>
-</div>
 <p>
 Lock a <em class="parameter"><code>keyring</code></em>, so that its contents may not be accessed without first
 supplying a password.
@@ -805,10 +737,6 @@ an error result otherwise.</td>
                                                          <em class="parameter"><code><a class="link" href="gnome-keyring-Callbacks.html#GnomeKeyringOperationDoneCallback" title="GnomeKeyringOperationDoneCallback ()"><span class="type">GnomeKeyringOperationDoneCallback</span></a> callback</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> data</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> destroy_data</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_delete</code> is deprecated and should not be used in newly-written code. Use <code class="function">secret_collection_delete()</code> instead.</p>
-</div>
 <p>
 Delete <em class="parameter"><code>keyring</code></em>. Once a keyring is deleted there is no mechanism for
 recovery of its contents.
@@ -853,10 +781,6 @@ to <a class="link" href="gnome-keyring-Miscellaneous-Functions.html#gnome-keyrin
 <div class="refsect2">
 <a name="gnome-keyring-delete-sync"></a><h3>gnome_keyring_delete_sync ()</h3>
 <pre class="programlisting"><a class="link" href="gnome-keyring-Result-Codes.html#GnomeKeyringResult" title="enum GnomeKeyringResult"><span class="returnvalue">GnomeKeyringResult</span></a>  gnome_keyring_delete_sync           (<em class="parameter"><code>const <span class="type">char</span> *keyring</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_delete_sync</code> is deprecated and should not be used in newly-written code. Use <code class="function">secret_collection_delete_sync()</code> instead.</p>
-</div>
 <p>
 Delete <em class="parameter"><code>keyring</code></em>. Once a keyring is deleted there is no mechanism for
 recovery of its contents.
@@ -891,10 +815,6 @@ an error result otherwise.</td>
                                                          <em class="parameter"><code><a class="link" href="gnome-keyring-Keyrings.html#GnomeKeyringOperationGetKeyringInfoCallback" title="GnomeKeyringOperationGetKeyringInfoCallback ()"><span class="type">GnomeKeyringOperationGetKeyringInfoCallback</span></a> callback</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> data</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> destroy_data</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_get_info</code> is deprecated and should not be used in newly-written code. Use <span class="type">SecretCollection</span> objects instead.</p>
-</div>
 <p>
 Get information about the <em class="parameter"><code>keyring</code></em>. The resulting <a class="link" href="gnome-keyring-Keyring-Info.html#GnomeKeyringInfo" title="GnomeKeyringInfo"><span class="type">GnomeKeyringInfo</span></a> structure
 will be passed to <em class="parameter"><code>callback</code></em>. The structure is freed after <em class="parameter"><code>callback</code></em> returns.
@@ -942,10 +862,6 @@ to <a class="link" href="gnome-keyring-Miscellaneous-Functions.html#gnome-keyrin
 <a name="gnome-keyring-get-info-sync"></a><h3>gnome_keyring_get_info_sync ()</h3>
 <pre class="programlisting"><a class="link" href="gnome-keyring-Result-Codes.html#GnomeKeyringResult" title="enum GnomeKeyringResult"><span class="returnvalue">GnomeKeyringResult</span></a>  gnome_keyring_get_info_sync         (<em class="parameter"><code>const <span class="type">char</span> *keyring</code></em>,
                                                          <em class="parameter"><code><a class="link" href="gnome-keyring-Keyring-Info.html#GnomeKeyringInfo" title="GnomeKeyringInfo"><span class="type">GnomeKeyringInfo</span></a> **info</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_get_info_sync</code> is deprecated and should not be used in newly-written code. Use <span class="type">SecretCollection</span> objects instead.</p>
-</div>
 <p>
 Get information about <em class="parameter"><code>keyring</code></em>.
 </p>
@@ -990,10 +906,6 @@ an error result otherwise.</td>
                                                          <em class="parameter"><code><a class="link" href="gnome-keyring-Callbacks.html#GnomeKeyringOperationDoneCallback" title="GnomeKeyringOperationDoneCallback ()"><span class="type">GnomeKeyringOperationDoneCallback</span></a> callback</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> data</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> destroy_data</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_set_info</code> is deprecated and should not be used in newly-written code. Use <span class="type">SecretCollection</span> objects instead.</p>
-</div>
 <p>
 Set flags and info for the <em class="parameter"><code>keyring</code></em>. The only fields in <em class="parameter"><code>info</code></em> that are used
 are lock_on_idle and lock_timeout.
@@ -1045,10 +957,6 @@ to <a class="link" href="gnome-keyring-Miscellaneous-Functions.html#gnome-keyrin
 <a name="gnome-keyring-set-info-sync"></a><h3>gnome_keyring_set_info_sync ()</h3>
 <pre class="programlisting"><a class="link" href="gnome-keyring-Result-Codes.html#GnomeKeyringResult" title="enum GnomeKeyringResult"><span class="returnvalue">GnomeKeyringResult</span></a>  gnome_keyring_set_info_sync         (<em class="parameter"><code>const <span class="type">char</span> *keyring</code></em>,
                                                          <em class="parameter"><code><a class="link" href="gnome-keyring-Keyring-Info.html#GnomeKeyringInfo" title="GnomeKeyringInfo"><span class="type">GnomeKeyringInfo</span></a> *info</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_set_info_sync</code> is deprecated and should not be used in newly-written code. Use <span class="type">SecretCollection</span> objects instead.</p>
-</div>
 <p>
 Set flags and info for <em class="parameter"><code>keyring</code></em>. The only fields in <em class="parameter"><code>info</code></em> that are used
 are lock_on_idle and lock_timeout.
@@ -1090,10 +998,6 @@ an error result otherwise.</td>
                                                          <em class="parameter"><code><a class="link" href="gnome-keyring-Callbacks.html#GnomeKeyringOperationDoneCallback" title="GnomeKeyringOperationDoneCallback ()"><span class="type">GnomeKeyringOperationDoneCallback</span></a> callback</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> data</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> destroy_data</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_change_password</code> is deprecated and should not be used in newly-written code. Not used with libsecret.</p>
-</div>
 <p>
 Change the password for a <em class="parameter"><code>keyring</code></em>. In most cases you would specify <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> for
 both the <em class="parameter"><code>original</code></em> and <em class="parameter"><code>password</code></em> arguments and allow the user to type the
@@ -1153,10 +1057,6 @@ to <a class="link" href="gnome-keyring-Miscellaneous-Functions.html#gnome-keyrin
 <pre class="programlisting"><a class="link" href="gnome-keyring-Result-Codes.html#GnomeKeyringResult" title="enum GnomeKeyringResult"><span class="returnvalue">GnomeKeyringResult</span></a>  gnome_keyring_change_password_sync  (<em class="parameter"><code>const <span class="type">char</span> *keyring</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *original</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *password</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_change_password_sync</code> is deprecated and should not be used in newly-written code. Not used with libsecret.</p>
-</div>
 <p>
 Change the password for <em class="parameter"><code>keyring</code></em>. In most cases you would specify <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> for
 both the <em class="parameter"><code>original</code></em> and <em class="parameter"><code>password</code></em> arguments and allow the user to type the
@@ -1204,10 +1104,6 @@ an error result otherwise.</td>
                                                          <em class="parameter"><code><a class="link" href="gnome-keyring-Callbacks.html#GnomeKeyringOperationGetListCallback" title="GnomeKeyringOperationGetListCallback ()"><span class="type">GnomeKeyringOperationGetListCallback</span></a> callback</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> data</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> destroy_data</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_list_item_ids</code> is deprecated and should not be used in newly-written code. Use <code class="function">secret_collection_get_items()</code> instead.</p>
-</div>
 <p>
 Get a list of all the ids for items in <em class="parameter"><code>keyring</code></em>. These are passed in a <a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><code class="literal">GList</code></a>
 to the <em class="parameter"><code>callback</code></em>. Use <a href="http://library.gnome.org/devel/glib/unstable/glib-Type-Conversion-Macros.html#GPOINTER-TO-UINT:CAPS"><code class="function">GPOINTER_TO_UINT()</code></a> on the list to access the integer ids.
@@ -1261,10 +1157,6 @@ to <a class="link" href="gnome-keyring-Miscellaneous-Functions.html#gnome-keyrin
 <a name="gnome-keyring-list-item-ids-sync"></a><h3>gnome_keyring_list_item_ids_sync ()</h3>
 <pre class="programlisting"><a class="link" href="gnome-keyring-Result-Codes.html#GnomeKeyringResult" title="enum GnomeKeyringResult"><span class="returnvalue">GnomeKeyringResult</span></a>  gnome_keyring_list_item_ids_sync    (<em class="parameter"><code>const <span class="type">char</span> *keyring</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> **ids</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_list_item_ids_sync</code> is deprecated and should not be used in newly-written code. Use <code class="function">secret_collection_get_items()</code> instead.</p>
-</div>
 <p>
 Get a list of all the ids for items in <em class="parameter"><code>keyring</code></em>.
 </p>
@@ -1306,6 +1198,6 @@ an error result otherwise.</td>
 </div>
 <div class="footer">
 <hr>
-          Generated by GTK-Doc V1.19</div>
+          Generated by GTK-Doc V1.18</div>
 </body>
 </html>

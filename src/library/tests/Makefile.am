@@ -3,8 +3,7 @@ INCLUDES = \
 	-I$(top_srcdir) \
 	-I$(top_srcdir)/library \
 	-DSRCDIR="\"@abs_srcdir@\"" \
-	$(LIBRARY_CFLAGS) \
-	-DGNOME_KEYRING_COMPILATION
+	$(LIBRARY_CFLAGS)
 
 noinst_LTLIBRARIES = libmock-service.la
 
@@ -40,17 +39,13 @@ noinst_PROGRAMS = \
 	frob-any-daemon \
 	frob-unlock-keyring \
 	frob-list-modified \
-	frob-default-keyring \
-	frob-lock-all
+	frob-default-keyring
 
 EXTRA_DIST = \
 	test-gi.py \
 	mock \
 	mock-service-normal.py \
 	mock-service-cancel.py
-
-CLEANFILES = \
-	*.gcda *.gcno
 
 test: $(TEST_PROGS)
 	gtester -k --verbose $(TEST_PROGS)

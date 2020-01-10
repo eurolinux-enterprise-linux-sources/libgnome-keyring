@@ -3,12 +3,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Item ACLs</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<meta name="generator" content="DocBook XSL Stylesheets V1.77.1">
 <link rel="home" href="index.html" title="gnome-keyring Reference Manual">
 <link rel="up" href="ch01.html" title="gnome-keyring API Reference">
 <link rel="prev" href="gnome-keyring-Item-Attributes.html" title="Item Attributes">
 <link rel="next" href="gnome-keyring-Search-Functionality.html" title="Search Functionality">
-<meta name="generator" content="GTK-Doc V1.19 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -72,14 +72,6 @@ enum                <a class="link" href="gnome-keyring-Item-ACLs.html#GnomeKeyr
 <div class="refsect1">
 <a name="gnome-keyring-Item-ACLs.description"></a><h2>Description</h2>
 <p>
-</p>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>All of these APIs are deprecated. Use
-<a class="ulink" href="" target="_top">libsecret</a>
-instead.</div>
-<p>
-</p>
-<p>
 Each item has an access control list, which specifies the applications that
 can read, write or delete an item. The read access applies only to reading the secret.
 All applications can read other parts of the item. ACLs are accessed and changed
@@ -123,7 +115,7 @@ A structure which contains access control information.
 </pre>
 <div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
 <h3 class="title">Warning</h3>
-<p><code class="literal">GnomeKeyringAccessType</code> is deprecated and should not be used in newly-written code. libsecret only supports string attributes.</p>
+<p><code class="literal">GnomeKeyringAccessType</code> is deprecated and should not be used in newly-written code.</p>
 </div>
 <p>
 Type of access.
@@ -163,7 +155,7 @@ Type of access.
 </pre>
 <div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
 <h3 class="title">Warning</h3>
-<p><code class="literal">GnomeKeyringAccessRestriction</code> is deprecated and should not be used in newly-written code. No permission prompts are supported.</p>
+<p><code class="literal">GnomeKeyringAccessRestriction</code> is deprecated and should not be used in newly-written code.</p>
 </div>
 <p>
 Type of access restriction.
@@ -199,7 +191,7 @@ Type of access restriction.
                                                         (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
 <h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_application_ref_new</code> is deprecated and should not be used in newly-written code. Not needed when using libsecret.</p>
+<p><code class="literal">gnome_keyring_application_ref_new</code> is deprecated and should not be used in newly-written code.</p>
 </div>
 <p>
 Create a new application reference.
@@ -222,7 +214,7 @@ Create a new application reference.
                                                         (<em class="parameter"><code>const <a class="link" href="gnome-keyring-Item-ACLs.html#GnomeKeyringApplicationRef" title="GnomeKeyringApplicationRef"><span class="type">GnomeKeyringApplicationRef</span></a> *app</code></em>);</pre>
 <div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
 <h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_application_ref_copy</code> is deprecated and should not be used in newly-written code. Not needed when using libsecret.</p>
+<p><code class="literal">gnome_keyring_application_ref_copy</code> is deprecated and should not be used in newly-written code.</p>
 </div>
 <p>
 Copy an application reference.
@@ -250,7 +242,7 @@ Copy an application reference.
 <pre class="programlisting"><span class="returnvalue">void</span>                gnome_keyring_application_ref_free  (<em class="parameter"><code><a class="link" href="gnome-keyring-Item-ACLs.html#GnomeKeyringApplicationRef" title="GnomeKeyringApplicationRef"><span class="type">GnomeKeyringApplicationRef</span></a> *app</code></em>);</pre>
 <div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
 <h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_application_ref_free</code> is deprecated and should not be used in newly-written code. Not needed when using libsecret.</p>
+<p><code class="literal">gnome_keyring_application_ref_free</code> is deprecated and should not be used in newly-written code.</p>
 </div>
 <p>
 Free an application reference.
@@ -274,7 +266,7 @@ Free an application reference.
                                                          <em class="parameter"><code><a class="link" href="gnome-keyring-Item-ACLs.html#GnomeKeyringAccessType" title="enum GnomeKeyringAccessType"><span class="type">GnomeKeyringAccessType</span></a> types_allowed</code></em>);</pre>
 <div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
 <h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_access_control_new</code> is deprecated and should not be used in newly-written code. Not needed when using libsecret.</p>
+<p><code class="literal">gnome_keyring_access_control_new</code> is deprecated and should not be used in newly-written code.</p>
 </div>
 <p>
 Create a new access control for an item. Combine the various access
@@ -309,7 +301,7 @@ rights allowed.
                                                         (<em class="parameter"><code><a class="link" href="gnome-keyring-Item-ACLs.html#GnomeKeyringAccessControl" title="GnomeKeyringAccessControl"><span class="type">GnomeKeyringAccessControl</span></a> *ac</code></em>);</pre>
 <div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
 <h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_access_control_copy</code> is deprecated and should not be used in newly-written code. Not needed when using libsecret.</p>
+<p><code class="literal">gnome_keyring_access_control_copy</code> is deprecated and should not be used in newly-written code.</p>
 </div>
 <p>
 Copy an access control for an item.
@@ -338,7 +330,7 @@ Copy an access control for an item.
 <pre class="programlisting"><span class="returnvalue">void</span>                gnome_keyring_access_control_free   (<em class="parameter"><code><a class="link" href="gnome-keyring-Item-ACLs.html#GnomeKeyringAccessControl" title="GnomeKeyringAccessControl"><span class="type">GnomeKeyringAccessControl</span></a> *ac</code></em>);</pre>
 <div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
 <h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_access_control_free</code> is deprecated and should not be used in newly-written code. Not needed when using libsecret.</p>
+<p><code class="literal">gnome_keyring_access_control_free</code> is deprecated and should not be used in newly-written code.</p>
 </div>
 <p>
 Free an access control for an item.
@@ -360,7 +352,7 @@ Free an access control for an item.
 <pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             gnome_keyring_acl_copy              (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> *list</code></em>);</pre>
 <div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
 <h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_acl_copy</code> is deprecated and should not be used in newly-written code. Not needed when using libsecret.</p>
+<p><code class="literal">gnome_keyring_acl_copy</code> is deprecated and should not be used in newly-written code.</p>
 </div>
 <p>
 Copy an access control list.
@@ -392,7 +384,7 @@ to free the memory. <span class="annotation">[<acronym title="Free data after th
 <pre class="programlisting"><span class="returnvalue">void</span>                gnome_keyring_acl_free              (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> *acl</code></em>);</pre>
 <div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
 <h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_acl_free</code> is deprecated and should not be used in newly-written code. Not needed when using libsecret.</p>
+<p><code class="literal">gnome_keyring_acl_free</code> is deprecated and should not be used in newly-written code.</p>
 </div>
 <p>
 Free an access control list.
@@ -417,7 +409,7 @@ Free an access control list.
                                                         (<em class="parameter"><code><a class="link" href="gnome-keyring-Item-ACLs.html#GnomeKeyringAccessControl" title="GnomeKeyringAccessControl"><span class="type">GnomeKeyringAccessControl</span></a> *ac</code></em>);</pre>
 <div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
 <h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_item_ac_get_display_name</code> is deprecated and should not be used in newly-written code. Not supported when using libsecret.</p>
+<p><code class="literal">gnome_keyring_item_ac_get_display_name</code> is deprecated and should not be used in newly-written code.</p>
 </div>
 <p>
 Get the access control application's display name.
@@ -447,7 +439,7 @@ Get the access control application's display name.
                                                          <em class="parameter"><code>const <span class="type">char</span> *value</code></em>);</pre>
 <div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
 <h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_item_ac_set_display_name</code> is deprecated and should not be used in newly-written code. Not supported when using libsecret.</p>
+<p><code class="literal">gnome_keyring_item_ac_set_display_name</code> is deprecated and should not be used in newly-written code.</p>
 </div>
 <p>
 Set the access control application's display name.
@@ -475,7 +467,7 @@ Set the access control application's display name.
 <pre class="programlisting"><span class="returnvalue">char</span> *              gnome_keyring_item_ac_get_path_name (<em class="parameter"><code><a class="link" href="gnome-keyring-Item-ACLs.html#GnomeKeyringAccessControl" title="GnomeKeyringAccessControl"><span class="type">GnomeKeyringAccessControl</span></a> *ac</code></em>);</pre>
 <div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
 <h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_item_ac_get_path_name</code> is deprecated and should not be used in newly-written code. Not supported when using libsecret.</p>
+<p><code class="literal">gnome_keyring_item_ac_get_path_name</code> is deprecated and should not be used in newly-written code.</p>
 </div>
 <p>
 Get the access control application's full path name.
@@ -504,7 +496,7 @@ Get the access control application's full path name.
                                                          <em class="parameter"><code>const <span class="type">char</span> *value</code></em>);</pre>
 <div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
 <h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_item_ac_set_path_name</code> is deprecated and should not be used in newly-written code. Not supported when using libsecret.</p>
+<p><code class="literal">gnome_keyring_item_ac_set_path_name</code> is deprecated and should not be used in newly-written code.</p>
 </div>
 <p>
 Set the access control application's full path name.
@@ -533,7 +525,7 @@ Set the access control application's full path name.
                                                         (<em class="parameter"><code><a class="link" href="gnome-keyring-Item-ACLs.html#GnomeKeyringAccessControl" title="GnomeKeyringAccessControl"><span class="type">GnomeKeyringAccessControl</span></a> *ac</code></em>);</pre>
 <div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
 <h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_item_ac_get_access_type</code> is deprecated and should not be used in newly-written code. Not supported when using libsecret.</p>
+<p><code class="literal">gnome_keyring_item_ac_get_access_type</code> is deprecated and should not be used in newly-written code.</p>
 </div>
 <p>
 Get the application access rights for the access control.
@@ -563,7 +555,7 @@ Get the application access rights for the access control.
                                                          <em class="parameter"><code>const <a class="link" href="gnome-keyring-Item-ACLs.html#GnomeKeyringAccessType" title="enum GnomeKeyringAccessType"><span class="type">GnomeKeyringAccessType</span></a> value</code></em>);</pre>
 <div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
 <h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_item_ac_set_access_type</code> is deprecated and should not be used in newly-written code. Not supported when using libsecret.</p>
+<p><code class="literal">gnome_keyring_item_ac_set_access_type</code> is deprecated and should not be used in newly-written code.</p>
 </div>
 <p>
 Set the application access rights for the access control.
@@ -589,6 +581,6 @@ Set the application access rights for the access control.
 </div>
 <div class="footer">
 <hr>
-          Generated by GTK-Doc V1.19</div>
+          Generated by GTK-Doc V1.18</div>
 </body>
 </html>

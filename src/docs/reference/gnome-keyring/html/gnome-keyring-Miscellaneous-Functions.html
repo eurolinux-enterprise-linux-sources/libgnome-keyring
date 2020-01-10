@@ -3,12 +3,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Miscellaneous Functions</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<meta name="generator" content="DocBook XSL Stylesheets V1.77.1">
 <link rel="home" href="index.html" title="gnome-keyring Reference Manual">
 <link rel="up" href="ch01.html" title="gnome-keyring API Reference">
 <link rel="prev" href="gnome-keyring-Result-Codes.html" title="Result Codes">
 <link rel="next" href="gnome-keyring-Daemon-Management-Functions.html" title="Daemon Management Functions">
-<meta name="generator" content="GTK-Doc V1.19 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -40,28 +40,16 @@
 <pre class="synopsis"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="gnome-keyring-Miscellaneous-Functions.html#gnome-keyring-is-available" title="gnome_keyring_is_available ()">gnome_keyring_is_available</a>          (<em class="parameter"><code><span class="type">void</span></code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="gnome-keyring-Miscellaneous-Functions.html#gnome-keyring-cancel-request" title="gnome_keyring_cancel_request ()">gnome_keyring_cancel_request</a>        (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> request</code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="gnome-keyring-Miscellaneous-Functions.html#gnome-keyring-string-list-free" title="gnome_keyring_string_list_free ()">gnome_keyring_string_list_free</a>      (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> *strings</code></em>);
-#define             <a class="link" href="gnome-keyring-Miscellaneous-Functions.html#GNOME-KEYRING-DEPRECATED:CAPS" title="GNOME_KEYRING_DEPRECATED">GNOME_KEYRING_DEPRECATED</a>
-#define             <a class="link" href="gnome-keyring-Miscellaneous-Functions.html#GNOME-KEYRING-DEPRECATED-FOR:CAPS" title="GNOME_KEYRING_DEPRECATED_FOR()">GNOME_KEYRING_DEPRECATED_FOR</a>        (x)
 </pre>
 </div>
 <div class="refsect1">
 <a name="gnome-keyring-Miscellaneous-Functions.description"></a><h2>Description</h2>
-<p>
-All of these APIs are deprecated. Use
-<a class="ulink" href="" target="_top">libsecret</a>
-instead.
-</p>
 </div>
 <div class="refsect1">
 <a name="gnome-keyring-Miscellaneous-Functions.details"></a><h2>Details</h2>
 <div class="refsect2">
 <a name="gnome-keyring-is-available"></a><h3>gnome_keyring_is_available ()</h3>
 <pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gnome_keyring_is_available          (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_is_available</code> is deprecated and should not be used in newly-written code. Not needed when using libsecret. The gnome-keyring daemon is
-            automatically started as needed.</p>
-</div>
 <p>
 Check whether you can communicate with a gnome-keyring-daemon.
 </p>
@@ -82,11 +70,6 @@ can't load and save passwords).</td>
 <div class="refsect2">
 <a name="gnome-keyring-cancel-request"></a><h3>gnome_keyring_cancel_request ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>                gnome_keyring_cancel_request        (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> request</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_cancel_request</code> is deprecated and should not be used in newly-written code. When using libsecret, use <a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> to cancel asynchronous
-            requests.</p>
-</div>
 <p>
 Cancel an asynchronous request.
 </p>
@@ -109,10 +92,6 @@ function will be called with a result of <a class="link" href="gnome-keyring-Res
 <div class="refsect2">
 <a name="gnome-keyring-string-list-free"></a><h3>gnome_keyring_string_list_free ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>                gnome_keyring_string_list_free      (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> *strings</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_string_list_free</code> is deprecated and should not be used in newly-written code. Not needed when using libsecret.</p>
-</div>
 <p>
 Free a list of string pointers.
 </p>
@@ -128,24 +107,10 @@ Free a list of string pointers.
 </tr></tbody>
 </table></div>
 </div>
-<hr>
-<div class="refsect2">
-<a name="GNOME-KEYRING-DEPRECATED:CAPS"></a><h3>GNOME_KEYRING_DEPRECATED</h3>
-<pre class="programlisting">#define             GNOME_KEYRING_DEPRECATED</pre>
-<p>
-</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="GNOME-KEYRING-DEPRECATED-FOR:CAPS"></a><h3>GNOME_KEYRING_DEPRECATED_FOR()</h3>
-<pre class="programlisting">#define             GNOME_KEYRING_DEPRECATED_FOR(x)</pre>
-<p>
-</p>
-</div>
 </div>
 </div>
 <div class="footer">
 <hr>
-          Generated by GTK-Doc V1.19</div>
+          Generated by GTK-Doc V1.18</div>
 </body>
 </html>

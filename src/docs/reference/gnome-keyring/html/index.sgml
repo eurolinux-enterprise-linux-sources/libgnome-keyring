@@ -218,8 +218,6 @@
 <ANCHOR id="gnome-keyring-is-available" href="gnome-keyring/gnome-keyring-Miscellaneous-Functions.html#gnome-keyring-is-available">
 <ANCHOR id="gnome-keyring-cancel-request" href="gnome-keyring/gnome-keyring-Miscellaneous-Functions.html#gnome-keyring-cancel-request">
 <ANCHOR id="gnome-keyring-string-list-free" href="gnome-keyring/gnome-keyring-Miscellaneous-Functions.html#gnome-keyring-string-list-free">
-<ANCHOR id="GNOME-KEYRING-DEPRECATED:CAPS" href="gnome-keyring/gnome-keyring-Miscellaneous-Functions.html#GNOME-KEYRING-DEPRECATED:CAPS">
-<ANCHOR id="GNOME-KEYRING-DEPRECATED-FOR:CAPS" href="gnome-keyring/gnome-keyring-Miscellaneous-Functions.html#GNOME-KEYRING-DEPRECATED-FOR:CAPS">
 <ANCHOR id="gnome-keyring-Daemon-Management-Functions" href="gnome-keyring/gnome-keyring-Daemon-Management-Functions.html">
 <ANCHOR id="gnome-keyring-Daemon-Management-Functions.synopsis" href="gnome-keyring/gnome-keyring-Daemon-Management-Functions.html#gnome-keyring-Daemon-Management-Functions.synopsis">
 <ANCHOR id="gnome-keyring-Daemon-Management-Functions.description" href="gnome-keyring/gnome-keyring-Daemon-Management-Functions.html#gnome-keyring-Daemon-Management-Functions.description">
@@ -234,8 +232,8 @@
 <ANCHOR id="GnomeKeyringOperationGetIntCallback" href="gnome-keyring/gnome-keyring-Callbacks.html#GnomeKeyringOperationGetIntCallback">
 <ANCHOR id="GnomeKeyringOperationGetListCallback" href="gnome-keyring/gnome-keyring-Callbacks.html#GnomeKeyringOperationGetListCallback">
 <ANCHOR id="GnomeKeyringOperationGetStringCallback" href="gnome-keyring/gnome-keyring-Callbacks.html#GnomeKeyringOperationGetStringCallback">
+<ANCHOR id="annotation-glossterm-out" href="gnome-keyring/annotation-glossary.html#annotation-glossterm-out">
 <ANCHOR id="annotation-glossterm-allow-none" href="gnome-keyring/annotation-glossary.html#annotation-glossterm-allow-none">
 <ANCHOR id="annotation-glossterm-element-type" href="gnome-keyring/annotation-glossary.html#annotation-glossterm-element-type">
-<ANCHOR id="annotation-glossterm-out" href="gnome-keyring/annotation-glossary.html#annotation-glossterm-out">
 <ANCHOR id="annotation-glossterm-transfer full" href="gnome-keyring/annotation-glossary.html#annotation-glossterm-transfer full">
 <ANCHOR id="annotation-glossterm-transfer none" href="gnome-keyring/annotation-glossary.html#annotation-glossterm-transfer none">

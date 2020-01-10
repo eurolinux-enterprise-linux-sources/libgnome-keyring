@@ -3,12 +3,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Item Attributes</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<meta name="generator" content="DocBook XSL Stylesheets V1.77.1">
 <link rel="home" href="index.html" title="gnome-keyring Reference Manual">
 <link rel="up" href="ch01.html" title="gnome-keyring API Reference">
 <link rel="prev" href="gnome-keyring-Item-Information.html" title="Item Information">
 <link rel="next" href="gnome-keyring-Item-ACLs.html" title="Item ACLs">
-<meta name="generator" content="GTK-Doc V1.19 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -62,14 +62,6 @@ const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.htm
 <div class="refsect1">
 <a name="gnome-keyring-Item-Attributes.description"></a><h2>Description</h2>
 <p>
-</p>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>All of these APIs are deprecated. Use
-<a class="ulink" href="" target="_top">libsecret</a>
-instead.</div>
-<p>
-</p>
-<p>
 Attributes allow various other pieces of information to be associated with an item.
 These can also be used to search for relevant items. Use <a class="link" href="gnome-keyring-Keyring-Items.html#gnome-keyring-item-get-attributes" title="gnome_keyring_item_get_attributes ()"><code class="function">gnome_keyring_item_get_attributes()</code></a>
 or <a class="link" href="gnome-keyring-Keyring-Items.html#gnome-keyring-item-set-attributes" title="gnome_keyring_item_set_attributes ()"><code class="function">gnome_keyring_item_set_attributes()</code></a>.
@@ -91,10 +83,6 @@ Each attribute has either a string, or unsigned integer value.
 	GNOME_KEYRING_ATTRIBUTE_TYPE_UINT32
 } GnomeKeyringAttributeType;
 </pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">GnomeKeyringAttributeType</code> is deprecated and should not be used in newly-written code.</p>
-</div>
 <p>
 The data type of the item attribute.
 </p>
@@ -122,10 +110,6 @@ The data type of the item attribute.
 <a name="GnomeKeyringAttributeList"></a><h3>GnomeKeyringAttributeList</h3>
 <pre class="programlisting">typedef GArray GnomeKeyringAttributeList;
 </pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">GnomeKeyringAttributeList</code> is deprecated and should not be used in newly-written code.</p>
-</div>
 <p>
 </p>
 </div>
@@ -141,10 +125,6 @@ The data type of the item attribute.
 	} value;
 } GnomeKeyringAttribute;
 </pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">GnomeKeyringAttribute</code> is deprecated and should not be used in newly-written code. libsecret only supports string attributes.</p>
-</div>
 <p>
 An item attribute. Set <code class="code">string</code> if data type is
 <a class="link" href="gnome-keyring-Item-Attributes.html#GNOME-KEYRING-ATTRIBUTE-TYPE-STRING:CAPS"><code class="literal">GNOME_KEYRING_ATTRIBUTE_TYPE_STRING</code></a> or <code class="code">integer</code> if data type is
@@ -171,10 +151,6 @@ An item attribute. Set <code class="code">string</code> if data type is
 <div class="refsect2">
 <a name="gnome-keyring-attribute-list-index"></a><h3>gnome_keyring_attribute_list_index()</h3>
 <pre class="programlisting">#define             gnome_keyring_attribute_list_index(a, i)</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_attribute_list_index</code> is deprecated and should not be used in newly-written code.</p>
-</div>
 <p>
 </p>
 </div>
@@ -183,11 +159,6 @@ An item attribute. Set <code class="code">string</code> if data type is
 <a name="gnome-keyring-attribute-list-new"></a><h3>gnome_keyring_attribute_list_new ()</h3>
 <pre class="programlisting"><a class="link" href="gnome-keyring-Item-Attributes.html#GnomeKeyringAttributeList" title="GnomeKeyringAttributeList"><span class="returnvalue">GnomeKeyringAttributeList</span></a> * gnome_keyring_attribute_list_new
                                                         (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_attribute_list_new</code> is deprecated and should not be used in newly-written code. libsecret stores attributes as a <a href="http://library.gnome.org/devel/glib/unstable/glib-Hash-Tables.html#GHashTable"><span class="type">GHashTable</span></a> containing
-            string keys and values; use <a href="http://library.gnome.org/devel/glib/unstable/glib-Hash-Tables.html#g-hash-table-new"><code class="function">g_hash_table_new()</code></a> instead.</p>
-</div>
 <p>
 Create a new <a class="link" href="gnome-keyring-Item-Attributes.html#GnomeKeyringAttributeList" title="GnomeKeyringAttributeList"><span class="type">GnomeKeyringAttributeList</span></a>.
 </p>
@@ -210,11 +181,6 @@ Create a new <a class="link" href="gnome-keyring-Item-Attributes.html#GnomeKeyri
                                                         (<em class="parameter"><code><a class="link" href="gnome-keyring-Item-Attributes.html#GnomeKeyringAttributeList" title="GnomeKeyringAttributeList"><span class="type">GnomeKeyringAttributeList</span></a> *attributes</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *name</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *value</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_attribute_list_append_string</code> is deprecated and should not be used in newly-written code. libsecret stores attributes as a <a href="http://library.gnome.org/devel/glib/unstable/glib-Hash-Tables.html#GHashTable"><span class="type">GHashTable</span></a> containing
-            string keys and values, use <a href="http://library.gnome.org/devel/glib/unstable/glib-Hash-Tables.html#g-hash-table-replace"><code class="function">g_hash_table_replace()</code></a> instead.</p>
-</div>
 <p>
 Store a key-value-pair with a string value in <em class="parameter"><code>attributes</code></em>.
 </p>
@@ -248,10 +214,6 @@ Store a key-value-pair with a string value in <em class="parameter"><code>attrib
                                                         (<em class="parameter"><code><a class="link" href="gnome-keyring-Item-Attributes.html#GnomeKeyringAttributeList" title="GnomeKeyringAttributeList"><span class="type">GnomeKeyringAttributeList</span></a> *attributes</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *name</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> value</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_attribute_list_append_uint32</code> is deprecated and should not be used in newly-written code. libsecret does not support number attributes.</p>
-</div>
 <p>
 Store a key-value-pair with an unsigned 32bit number value in <em class="parameter"><code>attributes</code></em>.
 </p>
@@ -282,11 +244,6 @@ Store a key-value-pair with an unsigned 32bit number value in <em class="paramet
 <div class="refsect2">
 <a name="gnome-keyring-attribute-list-free"></a><h3>gnome_keyring_attribute_list_free ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>                gnome_keyring_attribute_list_free   (<em class="parameter"><code><a class="link" href="gnome-keyring-Item-Attributes.html#GnomeKeyringAttributeList" title="GnomeKeyringAttributeList"><span class="type">GnomeKeyringAttributeList</span></a> *attributes</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_attribute_list_free</code> is deprecated and should not be used in newly-written code. libsecret stores attributes as a <a href="http://library.gnome.org/devel/glib/unstable/glib-Hash-Tables.html#GHashTable"><span class="type">GHashTable</span></a> containing
-            string keys and values, use <a href="http://library.gnome.org/devel/glib/unstable/glib-Hash-Tables.html#g-hash-table-unref"><code class="function">g_hash_table_unref()</code></a> instead.</p>
-</div>
 <p>
 Free the memory used by <em class="parameter"><code>attributes</code></em>.
 </p>
@@ -310,10 +267,6 @@ If a <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.
 <a name="gnome-keyring-attribute-list-copy"></a><h3>gnome_keyring_attribute_list_copy ()</h3>
 <pre class="programlisting"><a class="link" href="gnome-keyring-Item-Attributes.html#GnomeKeyringAttributeList" title="GnomeKeyringAttributeList"><span class="returnvalue">GnomeKeyringAttributeList</span></a> * gnome_keyring_attribute_list_copy
                                                         (<em class="parameter"><code><a class="link" href="gnome-keyring-Item-Attributes.html#GnomeKeyringAttributeList" title="GnomeKeyringAttributeList"><span class="type">GnomeKeyringAttributeList</span></a> *attributes</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_attribute_list_copy</code> is deprecated and should not be used in newly-written code. Not needed when using libsecret.</p>
-</div>
 <p>
 Copy a list of item attributes.
 </p>
@@ -339,10 +292,6 @@ Copy a list of item attributes.
 <div class="refsect2">
 <a name="gnome-keyring-attribute-get-string"></a><h3>gnome_keyring_attribute_get_string ()</h3>
 <pre class="programlisting">const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       gnome_keyring_attribute_get_string  (<em class="parameter"><code><a class="link" href="gnome-keyring-Item-Attributes.html#GnomeKeyringAttribute" title="GnomeKeyringAttribute"><span class="type">GnomeKeyringAttribute</span></a> *attribute</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_attribute_get_string</code> is deprecated and should not be used in newly-written code. Not needed when using libsecret.</p>
-</div>
 <p>
 Return the string value. It is an error to call this method if
 <em class="parameter"><code>attribute.type</code></em> is not <a class="link" href="gnome-keyring-Item-Attributes.html#GNOME-KEYRING-ATTRIBUTE-TYPE-STRING:CAPS"><span class="type">GNOME_KEYRING_ATTRIBUTE_TYPE_STRING</span></a>. This method is
@@ -373,10 +322,6 @@ not a copy, do not free. <span class="annotation">[<acronym title="Don't free da
 <div class="refsect2">
 <a name="gnome-keyring-attribute-get-uint32"></a><h3>gnome_keyring_attribute_get_uint32 ()</h3>
 <pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint32"><span class="returnvalue">guint32</span></a>             gnome_keyring_attribute_get_uint32  (<em class="parameter"><code><a class="link" href="gnome-keyring-Item-Attributes.html#GnomeKeyringAttribute" title="GnomeKeyringAttribute"><span class="type">GnomeKeyringAttribute</span></a> *attribute</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_attribute_get_uint32</code> is deprecated and should not be used in newly-written code. Not needed when using libsecret.</p>
-</div>
 <p>
 Return the uint32 value. It is an error to call this method if
 <em class="parameter"><code>attribute.type</code></em> is not <a class="link" href="gnome-keyring-Item-Attributes.html#GNOME-KEYRING-ATTRIBUTE-TYPE-UINT32:CAPS"><span class="type">GNOME_KEYRING_ATTRIBUTE_TYPE_UINT32</span></a>. This method is
@@ -405,6 +350,6 @@ you should just use attribute-&gt;value.integer.
 </div>
 <div class="footer">
 <hr>
-          Generated by GTK-Doc V1.19</div>
+          Generated by GTK-Doc V1.18</div>
 </body>
 </html>

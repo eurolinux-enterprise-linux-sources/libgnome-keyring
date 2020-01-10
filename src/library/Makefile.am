@@ -11,8 +11,7 @@ INCLUDES= \
 	-I$(top_srcdir) \
 	-I$(top_builddir) \
 	$(LIBRARY_CFLAGS) \
-	$(LIBGCRYPT_CFLAGS) \
-	-DGNOME_KEYRING_COMPILATION
+	$(LIBGCRYPT_CFLAGS)
 
 PUBLIC_SOURCES = \
 	gnome-keyring.c \
@@ -60,8 +59,7 @@ EXTRA_DIST = \
 	GnomeKeyring-1.0.metadata \
 	GnomeKeyring-1.0-custom.vala
 
-CLEANFILES = \
-	*.gcda *.gcno
+CLEANFILES=
 
 # build introspection typelib
 -include $(INTROSPECTION_MAKEFILE)

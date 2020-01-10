@@ -3,12 +3,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Search Functionality</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<meta name="generator" content="DocBook XSL Stylesheets V1.77.1">
 <link rel="home" href="index.html" title="gnome-keyring Reference Manual">
 <link rel="up" href="ch01.html" title="gnome-keyring API Reference">
 <link rel="prev" href="gnome-keyring-Item-ACLs.html" title="Item ACLs">
 <link rel="next" href="gnome-keyring-Network-Passwords.html" title="Network Passwords">
-<meta name="generator" content="GTK-Doc V1.19 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -62,14 +62,6 @@
 <div class="refsect1">
 <a name="gnome-keyring-Search-Functionality.description"></a><h2>Description</h2>
 <p>
-</p>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>All of these APIs are deprecated. Use
-<a class="ulink" href="" target="_top">libsecret</a>
-instead.</div>
-<p>
-</p>
-<p>
 A find operation searches through all keyrings for items that match the
 attributes. The user may have been prompted to unlock necessary keyrings, and
 user will have been prompted for access to the items if needed.
@@ -89,10 +81,6 @@ A find operation may return multiple or zero results.
 	char *secret;
 } GnomeKeyringFound;
 </pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">GnomeKeyringFound</code> is deprecated and should not be used in newly-written code. Not used with libsecret.</p>
-</div>
 <p>
 A found structure returned by a found operation. Use <a class="link" href="gnome-keyring-Search-Functionality.html#gnome-keyring-found-list-free" title="gnome_keyring_found_list_free ()"><code class="function">gnome_keyring_found_list_free()</code></a>
 to free a list of these structures.
@@ -126,10 +114,6 @@ to free a list of these structures.
 <div class="refsect2">
 <a name="gnome-keyring-found-copy"></a><h3>gnome_keyring_found_copy ()</h3>
 <pre class="programlisting"><a class="link" href="gnome-keyring-Search-Functionality.html#GnomeKeyringFound" title="GnomeKeyringFound"><span class="returnvalue">GnomeKeyringFound</span></a> * gnome_keyring_found_copy            (<em class="parameter"><code><a class="link" href="gnome-keyring-Search-Functionality.html#GnomeKeyringFound" title="GnomeKeyringFound"><span class="type">GnomeKeyringFound</span></a> *found</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_found_copy</code> is deprecated and should not be used in newly-written code. Not needed when using libsecret.</p>
-</div>
 <p>
 Copy a <a class="link" href="gnome-keyring-Search-Functionality.html#GnomeKeyringFound" title="GnomeKeyringFound"><span class="type">GnomeKeyringFound</span></a> item.
 </p>
@@ -156,10 +140,6 @@ Copy a <a class="link" href="gnome-keyring-Search-Functionality.html#GnomeKeyrin
 <div class="refsect2">
 <a name="gnome-keyring-found-free"></a><h3>gnome_keyring_found_free ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>                gnome_keyring_found_free            (<em class="parameter"><code><a class="link" href="gnome-keyring-Search-Functionality.html#GnomeKeyringFound" title="GnomeKeyringFound"><span class="type">GnomeKeyringFound</span></a> *found</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_found_free</code> is deprecated and should not be used in newly-written code. Deprecated: Not needed when using libsecret.</p>
-</div>
 <p>
 Free the memory used by a <a class="link" href="gnome-keyring-Search-Functionality.html#GnomeKeyringFound" title="GnomeKeyringFound"><span class="type">GnomeKeyringFound</span></a> item.
 </p>
@@ -183,10 +163,6 @@ results.
 <div class="refsect2">
 <a name="gnome-keyring-found-list-free"></a><h3>gnome_keyring_found_list_free ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>                gnome_keyring_found_list_free       (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> *found_list</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_found_list_free</code> is deprecated and should not be used in newly-written code. Not needed when using libsecret.</p>
-</div>
 <p>
 Free the memory used by the <a class="link" href="gnome-keyring-Search-Functionality.html#GnomeKeyringFound" title="GnomeKeyringFound"><span class="type">GnomeKeyringFound</span></a> items in <em class="parameter"><code>found_list</code></em>.
 </p>
@@ -210,10 +186,6 @@ Free the memory used by the <a class="link" href="gnome-keyring-Search-Functiona
                                                          <em class="parameter"><code><a class="link" href="gnome-keyring-Callbacks.html#GnomeKeyringOperationGetListCallback" title="GnomeKeyringOperationGetListCallback ()"><span class="type">GnomeKeyringOperationGetListCallback</span></a> callback</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> data</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> destroy_data</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_find_items</code> is deprecated and should not be used in newly-written code. Use <code class="function">secret_password_lookup()</code> or <code class="function">secret_service_search()</code> instead.</p>
-</div>
 <p>
 Searches through all keyrings for items that match the <em class="parameter"><code>attributes</code></em>. The matches
 are for exact equality.
@@ -274,10 +246,6 @@ to <a class="link" href="gnome-keyring-Miscellaneous-Functions.html#gnome-keyrin
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> data</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> destroy_data</code></em>,
                                                          <em class="parameter"><code>...</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_find_itemsv</code> is deprecated and should not be used in newly-written code. Use <code class="function">secret_password_lookup()</code> or <code class="function">secret_service_search()</code> instead.</p>
-</div>
 <p>
 Searches through all keyrings for items that match the specified attributes.
 The matches are for exact equality.
@@ -343,10 +311,6 @@ to <a class="link" href="gnome-keyring-Miscellaneous-Functions.html#gnome-keyrin
 <pre class="programlisting"><a class="link" href="gnome-keyring-Result-Codes.html#GnomeKeyringResult" title="enum GnomeKeyringResult"><span class="returnvalue">GnomeKeyringResult</span></a>  gnome_keyring_find_items_sync       (<em class="parameter"><code><a class="link" href="gnome-keyring-Item-Information.html#GnomeKeyringItemType" title="enum GnomeKeyringItemType"><span class="type">GnomeKeyringItemType</span></a> type</code></em>,
                                                          <em class="parameter"><code><a class="link" href="gnome-keyring-Item-Attributes.html#GnomeKeyringAttributeList" title="GnomeKeyringAttributeList"><span class="type">GnomeKeyringAttributeList</span></a> *attributes</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> **found</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_find_items_sync</code> is deprecated and should not be used in newly-written code. Use <code class="function">secret_password_lookup_sync()</code> or <code class="function">secret_service_search_sync()</code> instead.</p>
-</div>
 <p>
 Searches through all keyrings for items that match the <em class="parameter"><code>attributes</code></em> and <em class="parameter"><code>type</code></em>.
 The matches are for exact equality.
@@ -398,10 +362,6 @@ an error result otherwise.</td>
 <pre class="programlisting"><a class="link" href="gnome-keyring-Result-Codes.html#GnomeKeyringResult" title="enum GnomeKeyringResult"><span class="returnvalue">GnomeKeyringResult</span></a>  gnome_keyring_find_itemsv_sync      (<em class="parameter"><code><a class="link" href="gnome-keyring-Item-Information.html#GnomeKeyringItemType" title="enum GnomeKeyringItemType"><span class="type">GnomeKeyringItemType</span></a> type</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> **found</code></em>,
                                                          <em class="parameter"><code>...</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_find_itemsv_sync</code> is deprecated and should not be used in newly-written code. Use <code class="function">secret_password_lookup_sync()</code> or <code class="function">secret_service_search_sync()</code> instead.</p>
-</div>
 <p>
 Searches through all keyrings for items that match the <em class="parameter"><code>attributes</code></em> and <em class="parameter"><code>type</code></em>.
 The matches are for exact equality.
@@ -458,6 +418,6 @@ an error result otherwise.</td>
 </div>
 <div class="footer">
 <hr>
-          Generated by GTK-Doc V1.19</div>
+          Generated by GTK-Doc V1.18</div>
 </body>
 </html>

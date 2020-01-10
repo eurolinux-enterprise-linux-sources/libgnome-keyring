@@ -45,18 +45,3 @@ gnome-keyring-misc
 @strings: 
 
 
-<!-- ##### MACRO GNOME_KEYRING_DEPRECATED ##### -->
-<para>
-
-</para>
-
-
-
-<!-- ##### MACRO GNOME_KEYRING_DEPRECATED_FOR ##### -->
-<para>
-
-</para>
-
-@x: 
-
-

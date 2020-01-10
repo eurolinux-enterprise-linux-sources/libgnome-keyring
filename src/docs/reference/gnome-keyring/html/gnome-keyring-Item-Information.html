@@ -3,12 +3,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Item Information</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<meta name="generator" content="DocBook XSL Stylesheets V1.77.1">
 <link rel="home" href="index.html" title="gnome-keyring Reference Manual">
 <link rel="up" href="ch01.html" title="gnome-keyring API Reference">
 <link rel="prev" href="gnome-keyring-Keyring-Items.html" title="Keyring Items">
 <link rel="next" href="gnome-keyring-Item-Attributes.html" title="Item Attributes">
-<meta name="generator" content="GTK-Doc V1.19 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -60,14 +60,6 @@ typedef             <a class="link" href="gnome-keyring-Item-Information.html#Gn
 <div class="refsect1">
 <a name="gnome-keyring-Item-Information.description"></a><h2>Description</h2>
 <p>
-</p>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>All of these APIs are deprecated. Use
-<a class="ulink" href="" target="_top">libsecret</a>
-instead.</div>
-<p>
-</p>
-<p>
 <a class="link" href="gnome-keyring-Item-Information.html#GnomeKeyringItemInfo" title="GnomeKeyringItemInfo"><span class="type">GnomeKeyringItemInfo</span></a> represents the basic information about a keyring item.
 Use <a class="link" href="gnome-keyring-Keyring-Items.html#gnome-keyring-item-get-info" title="gnome_keyring_item_get_info ()"><code class="function">gnome_keyring_item_get_info()</code></a> or <a class="link" href="gnome-keyring-Keyring-Items.html#gnome-keyring-item-set-info" title="gnome_keyring_item_set_info ()"><code class="function">gnome_keyring_item_set_info()</code></a>.
 </p>
@@ -90,10 +82,6 @@ Use <a class="link" href="gnome-keyring-Keyring-Items.html#gnome-keyring-item-ge
 	GNOME_KEYRING_ITEM_LAST_TYPE,
 } GnomeKeyringItemType;
 </pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">GnomeKeyringItemType</code> is deprecated and should not be used in newly-written code. Use <span class="type">SecretSchema</span> instead.</p>
-</div>
 <p>
 The types of items.
 </p>
@@ -146,10 +134,6 @@ The types of items.
 <a name="GnomeKeyringItemInfo"></a><h3>GnomeKeyringItemInfo</h3>
 <pre class="programlisting">typedef struct GnomeKeyringItemInfo GnomeKeyringItemInfo;
 </pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">GnomeKeyringItemInfo</code> is deprecated and should not be used in newly-written code.</p>
-</div>
 <p>
 </p>
 </div>
@@ -157,10 +141,6 @@ The types of items.
 <div class="refsect2">
 <a name="gnome-keyring-item-info-free"></a><h3>gnome_keyring_item_info_free ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>                gnome_keyring_item_info_free        (<em class="parameter"><code><a class="link" href="gnome-keyring-Item-Information.html#GnomeKeyringItemInfo" title="GnomeKeyringItemInfo"><span class="type">GnomeKeyringItemInfo</span></a> *item_info</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_item_info_free</code> is deprecated and should not be used in newly-written code. Use <span class="type">SecretItem</span> objects instead.</p>
-</div>
 <p>
 Free the <a class="link" href="gnome-keyring-Item-Information.html#GnomeKeyringItemInfo" title="GnomeKeyringItemInfo"><span class="type">GnomeKeyringItemInfo</span></a> object.
 </p>
@@ -182,10 +162,6 @@ A <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.htm
 <div class="refsect2">
 <a name="gnome-keyring-item-info-new"></a><h3>gnome_keyring_item_info_new ()</h3>
 <pre class="programlisting"><a class="link" href="gnome-keyring-Item-Information.html#GnomeKeyringItemInfo" title="GnomeKeyringItemInfo"><span class="returnvalue">GnomeKeyringItemInfo</span></a> * gnome_keyring_item_info_new      (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_item_info_new</code> is deprecated and should not be used in newly-written code. Use <span class="type">SecretItem</span> objects instead.</p>
-</div>
 <p>
 Create a new <a class="link" href="gnome-keyring-Item-Information.html#GnomeKeyringItemInfo" title="GnomeKeyringItemInfo"><span class="type">GnomeKeyringItemInfo</span></a> object.
 Free the <a class="link" href="gnome-keyring-Item-Information.html#GnomeKeyringItemInfo" title="GnomeKeyringItemInfo"><span class="type">GnomeKeyringItemInfo</span></a> object.
@@ -205,10 +181,6 @@ Free the <a class="link" href="gnome-keyring-Item-Information.html#GnomeKeyringI
 <div class="refsect2">
 <a name="gnome-keyring-item-info-copy"></a><h3>gnome_keyring_item_info_copy ()</h3>
 <pre class="programlisting"><a class="link" href="gnome-keyring-Item-Information.html#GnomeKeyringItemInfo" title="GnomeKeyringItemInfo"><span class="returnvalue">GnomeKeyringItemInfo</span></a> * gnome_keyring_item_info_copy     (<em class="parameter"><code><a class="link" href="gnome-keyring-Item-Information.html#GnomeKeyringItemInfo" title="GnomeKeyringItemInfo"><span class="type">GnomeKeyringItemInfo</span></a> *item_info</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_item_info_copy</code> is deprecated and should not be used in newly-written code. Use <span class="type">SecretItem</span> objects instead.</p>
-</div>
 <p>
 Copy a <a class="link" href="gnome-keyring-Item-Information.html#GnomeKeyringItemInfo" title="GnomeKeyringItemInfo"><span class="type">GnomeKeyringItemInfo</span></a> object.
 </p>
@@ -233,10 +205,6 @@ Copy a <a class="link" href="gnome-keyring-Item-Information.html#GnomeKeyringIte
 <div class="refsect2">
 <a name="gnome-keyring-item-info-get-type"></a><h3>gnome_keyring_item_info_get_type ()</h3>
 <pre class="programlisting"><a class="link" href="gnome-keyring-Item-Information.html#GnomeKeyringItemType" title="enum GnomeKeyringItemType"><span class="returnvalue">GnomeKeyringItemType</span></a> gnome_keyring_item_info_get_type   (<em class="parameter"><code><a class="link" href="gnome-keyring-Item-Information.html#GnomeKeyringItemInfo" title="GnomeKeyringItemInfo"><span class="type">GnomeKeyringItemInfo</span></a> *item_info</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_item_info_get_type</code> is deprecated and should not be used in newly-written code. Use <code class="function">secret_item_get_schema_name()</code> instead.</p>
-</div>
 <p>
 Get the item type.
 </p>
@@ -262,10 +230,6 @@ Get the item type.
 <a name="gnome-keyring-item-info-set-type"></a><h3>gnome_keyring_item_info_set_type ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>                gnome_keyring_item_info_set_type    (<em class="parameter"><code><a class="link" href="gnome-keyring-Item-Information.html#GnomeKeyringItemInfo" title="GnomeKeyringItemInfo"><span class="type">GnomeKeyringItemInfo</span></a> *item_info</code></em>,
                                                          <em class="parameter"><code><a class="link" href="gnome-keyring-Item-Information.html#GnomeKeyringItemType" title="enum GnomeKeyringItemType"><span class="type">GnomeKeyringItemType</span></a> type</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_item_info_set_type</code> is deprecated and should not be used in newly-written code. Use <code class="function">secret_item_set_attributes()</code> instead.</p>
-</div>
 <p>
 Set the type on an item info.
 </p>
@@ -290,10 +254,6 @@ Set the type on an item info.
 <div class="refsect2">
 <a name="gnome-keyring-item-info-get-secret"></a><h3>gnome_keyring_item_info_get_secret ()</h3>
 <pre class="programlisting"><span class="returnvalue">char</span> *              gnome_keyring_item_info_get_secret  (<em class="parameter"><code><a class="link" href="gnome-keyring-Item-Information.html#GnomeKeyringItemInfo" title="GnomeKeyringItemInfo"><span class="type">GnomeKeyringItemInfo</span></a> *item_info</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_item_info_get_secret</code> is deprecated and should not be used in newly-written code. Use <code class="function">secret_item_get_secret()</code> instead.</p>
-</div>
 <p>
 Get the item secret.
 </p>
@@ -319,10 +279,6 @@ Get the item secret.
 <a name="gnome-keyring-item-info-set-secret"></a><h3>gnome_keyring_item_info_set_secret ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>                gnome_keyring_item_info_set_secret  (<em class="parameter"><code><a class="link" href="gnome-keyring-Item-Information.html#GnomeKeyringItemInfo" title="GnomeKeyringItemInfo"><span class="type">GnomeKeyringItemInfo</span></a> *item_info</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *value</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_item_info_set_secret</code> is deprecated and should not be used in newly-written code. Use <code class="function">secret_item_set_secret()</code> instead.</p>
-</div>
 <p>
 Set the secret on an item info.
 </p>
@@ -348,10 +304,6 @@ Set the secret on an item info.
 <a name="gnome-keyring-item-info-get-display-name"></a><h3>gnome_keyring_item_info_get_display_name ()</h3>
 <pre class="programlisting"><span class="returnvalue">char</span> *              gnome_keyring_item_info_get_display_name
                                                         (<em class="parameter"><code><a class="link" href="gnome-keyring-Item-Information.html#GnomeKeyringItemInfo" title="GnomeKeyringItemInfo"><span class="type">GnomeKeyringItemInfo</span></a> *item_info</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_item_info_get_display_name</code> is deprecated and should not be used in newly-written code. Use <code class="function">secret_item_get_label()</code> instead.</p>
-</div>
 <p>
 Get the item display name.
 </p>
@@ -378,10 +330,6 @@ Get the item display name.
 <pre class="programlisting"><span class="returnvalue">void</span>                gnome_keyring_item_info_set_display_name
                                                         (<em class="parameter"><code><a class="link" href="gnome-keyring-Item-Information.html#GnomeKeyringItemInfo" title="GnomeKeyringItemInfo"><span class="type">GnomeKeyringItemInfo</span></a> *item_info</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *value</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_item_info_set_display_name</code> is deprecated and should not be used in newly-written code. Use <code class="function">secret_item_set_label()</code> instead.</p>
-</div>
 <p>
 Set the display name on an item info.
 </p>
@@ -406,10 +354,6 @@ Set the display name on an item info.
 <div class="refsect2">
 <a name="gnome-keyring-item-info-get-mtime"></a><h3>gnome_keyring_item_info_get_mtime ()</h3>
 <pre class="programlisting"><span class="returnvalue">time_t</span>              gnome_keyring_item_info_get_mtime   (<em class="parameter"><code><a class="link" href="gnome-keyring-Item-Information.html#GnomeKeyringItemInfo" title="GnomeKeyringItemInfo"><span class="type">GnomeKeyringItemInfo</span></a> *item_info</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_item_info_get_mtime</code> is deprecated and should not be used in newly-written code. Use <code class="function">secret_item_get_modified()</code> instead.</p>
-</div>
 <p>
 Get the item last modified time.
 </p>
@@ -434,10 +378,6 @@ Get the item last modified time.
 <div class="refsect2">
 <a name="gnome-keyring-item-info-get-ctime"></a><h3>gnome_keyring_item_info_get_ctime ()</h3>
 <pre class="programlisting"><span class="returnvalue">time_t</span>              gnome_keyring_item_info_get_ctime   (<em class="parameter"><code><a class="link" href="gnome-keyring-Item-Information.html#GnomeKeyringItemInfo" title="GnomeKeyringItemInfo"><span class="type">GnomeKeyringItemInfo</span></a> *item_info</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_item_info_get_ctime</code> is deprecated and should not be used in newly-written code. Use <code class="function">secret_item_get_created()</code> instead.</p>
-</div>
 <p>
 Get the item created time.
 </p>
@@ -462,6 +402,6 @@ Get the item created time.
 </div>
 <div class="footer">
 <hr>
-          Generated by GTK-Doc V1.19</div>
+          Generated by GTK-Doc V1.18</div>
 </body>
 </html>

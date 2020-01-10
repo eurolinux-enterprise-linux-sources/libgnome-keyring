@@ -21,159 +21,157 @@
     <sub name="Annotation Glossary" link="annotation-glossary.html"/>
   </chapters>
   <functions>
-    <keyword type="struct" name="GnomeKeyringPasswordSchema" link="gnome-keyring-Simple-Password-Storage.html#GnomeKeyringPasswordSchema" deprecated=""/>
-    <keyword type="struct" name="GnomeKeyringPasswordSchemaAttribute" link="gnome-keyring-Simple-Password-Storage.html#GnomeKeyringPasswordSchemaAttribute" deprecated=""/>
-    <keyword type="variable" name="GNOME_KEYRING_NETWORK_PASSWORD" link="gnome-keyring-Simple-Password-Storage.html#GNOME-KEYRING-NETWORK-PASSWORD:CAPS" deprecated=""/>
-    <keyword type="macro" name="GNOME_KEYRING_DEFAULT" link="gnome-keyring-Simple-Password-Storage.html#GNOME-KEYRING-DEFAULT:CAPS" deprecated=""/>
-    <keyword type="macro" name="GNOME_KEYRING_SESSION" link="gnome-keyring-Simple-Password-Storage.html#GNOME-KEYRING-SESSION:CAPS" deprecated=""/>
-    <keyword type="function" name="gnome_keyring_store_password ()" link="gnome-keyring-Simple-Password-Storage.html#gnome-keyring-store-password" deprecated="Use secret_password_store() instead." since="2.22"/>
-    <keyword type="function" name="gnome_keyring_store_password_sync ()" link="gnome-keyring-Simple-Password-Storage.html#gnome-keyring-store-password-sync" deprecated="Use secret_password_store_sync() instead." since="2.22"/>
-    <keyword type="function" name="gnome_keyring_find_password ()" link="gnome-keyring-Simple-Password-Storage.html#gnome-keyring-find-password" deprecated="Use secret_password_lookup() instead." since="2.22"/>
-    <keyword type="function" name="gnome_keyring_find_password_sync ()" link="gnome-keyring-Simple-Password-Storage.html#gnome-keyring-find-password-sync" deprecated="Use secret_password_lookup_sync() instead." since="2.22"/>
-    <keyword type="function" name="gnome_keyring_delete_password ()" link="gnome-keyring-Simple-Password-Storage.html#gnome-keyring-delete-password" deprecated="Use secret_password_clear() instead." since="2.22"/>
-    <keyword type="function" name="gnome_keyring_delete_password_sync ()" link="gnome-keyring-Simple-Password-Storage.html#gnome-keyring-delete-password-sync" deprecated="Use secret_password_clear_sync() instead." since="2.22"/>
-    <keyword type="function" name="gnome_keyring_free_password ()" link="gnome-keyring-Simple-Password-Storage.html#gnome-keyring-free-password" deprecated="Use secret_password_free() instead."/>
-    <keyword type="function" name="GnomeKeyringOperationGetKeyringInfoCallback ()" link="gnome-keyring-Keyrings.html#GnomeKeyringOperationGetKeyringInfoCallback" deprecated=""/>
-    <keyword type="function" name="gnome_keyring_set_default_keyring ()" link="gnome-keyring-Keyrings.html#gnome-keyring-set-default-keyring" deprecated="Use secret_service_set_alias() instead."/>
-    <keyword type="function" name="gnome_keyring_set_default_keyring_sync ()" link="gnome-keyring-Keyrings.html#gnome-keyring-set-default-keyring-sync" deprecated="Use secret_service_set_alias_sync() instead."/>
-    <keyword type="function" name="gnome_keyring_get_default_keyring ()" link="gnome-keyring-Keyrings.html#gnome-keyring-get-default-keyring" deprecated="Use secret_collection_for_alias() instead."/>
-    <keyword type="function" name="gnome_keyring_get_default_keyring_sync ()" link="gnome-keyring-Keyrings.html#gnome-keyring-get-default-keyring-sync" deprecated="Use secret_collection_for_alias_sync() instead."/>
-    <keyword type="function" name="gnome_keyring_list_keyring_names ()" link="gnome-keyring-Keyrings.html#gnome-keyring-list-keyring-names" deprecated="Use secret_service_get_collections() instead."/>
-    <keyword type="function" name="gnome_keyring_list_keyring_names_sync ()" link="gnome-keyring-Keyrings.html#gnome-keyring-list-keyring-names-sync" deprecated="Use secret_service_get_collections() instead."/>
-    <keyword type="function" name="gnome_keyring_lock_all ()" link="gnome-keyring-Keyrings.html#gnome-keyring-lock-all" deprecated="Use libsecret instead."/>
-    <keyword type="function" name="gnome_keyring_lock_all_sync ()" link="gnome-keyring-Keyrings.html#gnome-keyring-lock-all-sync" deprecated="Use libsecret instead."/>
-    <keyword type="function" name="gnome_keyring_create ()" link="gnome-keyring-Keyrings.html#gnome-keyring-create" deprecated="Use secret_collection_create() instead."/>
-    <keyword type="function" name="gnome_keyring_create_sync ()" link="gnome-keyring-Keyrings.html#gnome-keyring-create-sync" deprecated="Use secret_collection_create_sync() instead."/>
-    <keyword type="function" name="gnome_keyring_unlock ()" link="gnome-keyring-Keyrings.html#gnome-keyring-unlock" deprecated="Use secret_service_unlock() instead."/>
-    <keyword type="function" name="gnome_keyring_unlock_sync ()" link="gnome-keyring-Keyrings.html#gnome-keyring-unlock-sync" deprecated="Use secret_service_unlock_sync() instead."/>
-    <keyword type="function" name="gnome_keyring_lock ()" link="gnome-keyring-Keyrings.html#gnome-keyring-lock" deprecated="Use secret_service_lock() instead."/>
-    <keyword type="function" name="gnome_keyring_lock_sync ()" link="gnome-keyring-Keyrings.html#gnome-keyring-lock-sync" deprecated="Use secret_service_lock_sync() instead."/>
-    <keyword type="function" name="gnome_keyring_delete ()" link="gnome-keyring-Keyrings.html#gnome-keyring-delete" deprecated="Use secret_collection_delete() instead."/>
-    <keyword type="function" name="gnome_keyring_delete_sync ()" link="gnome-keyring-Keyrings.html#gnome-keyring-delete-sync" deprecated="Use secret_collection_delete_sync() instead."/>
-    <keyword type="function" name="gnome_keyring_get_info ()" link="gnome-keyring-Keyrings.html#gnome-keyring-get-info" deprecated="Use #SecretCollection objects instead."/>
-    <keyword type="function" name="gnome_keyring_get_info_sync ()" link="gnome-keyring-Keyrings.html#gnome-keyring-get-info-sync" deprecated="Use #SecretCollection objects instead."/>
-    <keyword type="function" name="gnome_keyring_set_info ()" link="gnome-keyring-Keyrings.html#gnome-keyring-set-info" deprecated="Use #SecretCollection objects instead."/>
-    <keyword type="function" name="gnome_keyring_set_info_sync ()" link="gnome-keyring-Keyrings.html#gnome-keyring-set-info-sync" deprecated="Use #SecretCollection objects instead."/>
-    <keyword type="function" name="gnome_keyring_change_password ()" link="gnome-keyring-Keyrings.html#gnome-keyring-change-password" deprecated="Not used with libsecret."/>
-    <keyword type="function" name="gnome_keyring_change_password_sync ()" link="gnome-keyring-Keyrings.html#gnome-keyring-change-password-sync" deprecated="Not used with libsecret."/>
-    <keyword type="function" name="gnome_keyring_list_item_ids ()" link="gnome-keyring-Keyrings.html#gnome-keyring-list-item-ids" deprecated="Use secret_collection_get_items() instead."/>
-    <keyword type="function" name="gnome_keyring_list_item_ids_sync ()" link="gnome-keyring-Keyrings.html#gnome-keyring-list-item-ids-sync" deprecated="Use secret_collection_get_items() instead."/>
-    <keyword type="typedef" name="GnomeKeyringInfo" link="gnome-keyring-Keyring-Info.html#GnomeKeyringInfo" deprecated=""/>
-    <keyword type="function" name="gnome_keyring_info_free ()" link="gnome-keyring-Keyring-Info.html#gnome-keyring-info-free" deprecated="Use #SecretCollection objects instead."/>
-    <keyword type="function" name="gnome_keyring_info_copy ()" link="gnome-keyring-Keyring-Info.html#gnome-keyring-info-copy" deprecated="Use #SecretCollection objects instead."/>
-    <keyword type="function" name="gnome_keyring_info_set_lock_on_idle ()" link="gnome-keyring-Keyring-Info.html#gnome-keyring-info-set-lock-on-idle" deprecated="Not supported when using libsecret."/>
-    <keyword type="function" name="gnome_keyring_info_get_lock_on_idle ()" link="gnome-keyring-Keyring-Info.html#gnome-keyring-info-get-lock-on-idle" deprecated="Not supported when using libsecret."/>
-    <keyword type="function" name="gnome_keyring_info_set_lock_timeout ()" link="gnome-keyring-Keyring-Info.html#gnome-keyring-info-set-lock-timeout" deprecated="Not supported when using libsecret."/>
-    <keyword type="function" name="gnome_keyring_info_get_lock_timeout ()" link="gnome-keyring-Keyring-Info.html#gnome-keyring-info-get-lock-timeout" deprecated="Not supported when using libsecret."/>
-    <keyword type="function" name="gnome_keyring_info_get_mtime ()" link="gnome-keyring-Keyring-Info.html#gnome-keyring-info-get-mtime" deprecated="Use secret_collection_get_modified() instead."/>
-    <keyword type="function" name="gnome_keyring_info_get_ctime ()" link="gnome-keyring-Keyring-Info.html#gnome-keyring-info-get-ctime" deprecated="Use secret_collection_get_created() instead."/>
-    <keyword type="function" name="gnome_keyring_info_get_is_locked ()" link="gnome-keyring-Keyring-Info.html#gnome-keyring-info-get-is-locked" deprecated="Use secret_collection_get_locked() instead."/>
-    <keyword type="enum" name="enum GnomeKeyringItemInfoFlags" link="gnome-keyring-Keyring-Items.html#GnomeKeyringItemInfoFlags" deprecated=""/>
-    <keyword type="function" name="GnomeKeyringOperationGetItemInfoCallback ()" link="gnome-keyring-Keyring-Items.html#GnomeKeyringOperationGetItemInfoCallback" deprecated=""/>
-    <keyword type="function" name="GnomeKeyringOperationGetAttributesCallback ()" link="gnome-keyring-Keyring-Items.html#GnomeKeyringOperationGetAttributesCallback" deprecated=""/>
-    <keyword type="function" name="gnome_keyring_item_create ()" link="gnome-keyring-Keyring-Items.html#gnome-keyring-item-create" deprecated="Use secret_password_store() or secret_item_create() instead."/>
-    <keyword type="function" name="gnome_keyring_item_create_sync ()" link="gnome-keyring-Keyring-Items.html#gnome-keyring-item-create-sync" deprecated="Use secret_password_store_sync() or secret_item_create_sync() instead."/>
-    <keyword type="function" name="gnome_keyring_item_delete ()" link="gnome-keyring-Keyring-Items.html#gnome-keyring-item-delete" deprecated="Use secret_password_clear() or secret_item_delete() instead."/>
-    <keyword type="function" name="gnome_keyring_item_delete_sync ()" link="gnome-keyring-Keyring-Items.html#gnome-keyring-item-delete-sync" deprecated="Use secret_password_clear_sync() or secret_item_delete_sync() instead."/>
-    <keyword type="function" name="gnome_keyring_item_get_info ()" link="gnome-keyring-Keyring-Items.html#gnome-keyring-item-get-info" deprecated="Use #SecretItem objects instead."/>
-    <keyword type="function" name="gnome_keyring_item_get_info_full ()" link="gnome-keyring-Keyring-Items.html#gnome-keyring-item-get-info-full" deprecated="Use #SecretItem objects instead."/>
-    <keyword type="function" name="gnome_keyring_item_get_info_full_sync ()" link="gnome-keyring-Keyring-Items.html#gnome-keyring-item-get-info-full-sync" deprecated="Use #SecretItem objects instead."/>
-    <keyword type="function" name="gnome_keyring_item_get_info_sync ()" link="gnome-keyring-Keyring-Items.html#gnome-keyring-item-get-info-sync" deprecated="Use #SecretItem objects instead."/>
-    <keyword type="function" name="gnome_keyring_item_set_info ()" link="gnome-keyring-Keyring-Items.html#gnome-keyring-item-set-info" deprecated="Use #SecretItem objects instead."/>
-    <keyword type="function" name="gnome_keyring_item_set_info_sync ()" link="gnome-keyring-Keyring-Items.html#gnome-keyring-item-set-info-sync" deprecated="Use #SecretItem objects instead."/>
-    <keyword type="function" name="gnome_keyring_item_get_attributes ()" link="gnome-keyring-Keyring-Items.html#gnome-keyring-item-get-attributes" deprecated="Use secret_item_get_attributes() instead."/>
-    <keyword type="function" name="gnome_keyring_item_get_attributes_sync ()" link="gnome-keyring-Keyring-Items.html#gnome-keyring-item-get-attributes-sync" deprecated="Use secret_item_get_attributes() instead."/>
-    <keyword type="function" name="gnome_keyring_item_set_attributes ()" link="gnome-keyring-Keyring-Items.html#gnome-keyring-item-set-attributes" deprecated="Use secret_item_set_attributes() instead."/>
-    <keyword type="function" name="gnome_keyring_item_set_attributes_sync ()" link="gnome-keyring-Keyring-Items.html#gnome-keyring-item-set-attributes-sync" deprecated="Use secret_item_set_attributes_sync() instead."/>
+    <keyword type="struct" name="GnomeKeyringPasswordSchema" link="gnome-keyring-Simple-Password-Storage.html#GnomeKeyringPasswordSchema"/>
+    <keyword type="struct" name="GnomeKeyringPasswordSchemaAttribute" link="gnome-keyring-Simple-Password-Storage.html#GnomeKeyringPasswordSchemaAttribute"/>
+    <keyword type="variable" name="GNOME_KEYRING_NETWORK_PASSWORD" link="gnome-keyring-Simple-Password-Storage.html#GNOME-KEYRING-NETWORK-PASSWORD:CAPS"/>
+    <keyword type="macro" name="GNOME_KEYRING_DEFAULT" link="gnome-keyring-Simple-Password-Storage.html#GNOME-KEYRING-DEFAULT:CAPS"/>
+    <keyword type="macro" name="GNOME_KEYRING_SESSION" link="gnome-keyring-Simple-Password-Storage.html#GNOME-KEYRING-SESSION:CAPS"/>
+    <keyword type="function" name="gnome_keyring_store_password ()" link="gnome-keyring-Simple-Password-Storage.html#gnome-keyring-store-password" since="2.22"/>
+    <keyword type="function" name="gnome_keyring_store_password_sync ()" link="gnome-keyring-Simple-Password-Storage.html#gnome-keyring-store-password-sync" since="2.22"/>
+    <keyword type="function" name="gnome_keyring_find_password ()" link="gnome-keyring-Simple-Password-Storage.html#gnome-keyring-find-password" since="2.22"/>
+    <keyword type="function" name="gnome_keyring_find_password_sync ()" link="gnome-keyring-Simple-Password-Storage.html#gnome-keyring-find-password-sync" since="2.22"/>
+    <keyword type="function" name="gnome_keyring_delete_password ()" link="gnome-keyring-Simple-Password-Storage.html#gnome-keyring-delete-password" since="2.22"/>
+    <keyword type="function" name="gnome_keyring_delete_password_sync ()" link="gnome-keyring-Simple-Password-Storage.html#gnome-keyring-delete-password-sync" since="2.22"/>
+    <keyword type="function" name="gnome_keyring_free_password ()" link="gnome-keyring-Simple-Password-Storage.html#gnome-keyring-free-password"/>
+    <keyword type="function" name="GnomeKeyringOperationGetKeyringInfoCallback ()" link="gnome-keyring-Keyrings.html#GnomeKeyringOperationGetKeyringInfoCallback"/>
+    <keyword type="function" name="gnome_keyring_set_default_keyring ()" link="gnome-keyring-Keyrings.html#gnome-keyring-set-default-keyring"/>
+    <keyword type="function" name="gnome_keyring_set_default_keyring_sync ()" link="gnome-keyring-Keyrings.html#gnome-keyring-set-default-keyring-sync"/>
+    <keyword type="function" name="gnome_keyring_get_default_keyring ()" link="gnome-keyring-Keyrings.html#gnome-keyring-get-default-keyring"/>
+    <keyword type="function" name="gnome_keyring_get_default_keyring_sync ()" link="gnome-keyring-Keyrings.html#gnome-keyring-get-default-keyring-sync"/>
+    <keyword type="function" name="gnome_keyring_list_keyring_names ()" link="gnome-keyring-Keyrings.html#gnome-keyring-list-keyring-names"/>
+    <keyword type="function" name="gnome_keyring_list_keyring_names_sync ()" link="gnome-keyring-Keyrings.html#gnome-keyring-list-keyring-names-sync"/>
+    <keyword type="function" name="gnome_keyring_lock_all ()" link="gnome-keyring-Keyrings.html#gnome-keyring-lock-all"/>
+    <keyword type="function" name="gnome_keyring_lock_all_sync ()" link="gnome-keyring-Keyrings.html#gnome-keyring-lock-all-sync"/>
+    <keyword type="function" name="gnome_keyring_create ()" link="gnome-keyring-Keyrings.html#gnome-keyring-create"/>
+    <keyword type="function" name="gnome_keyring_create_sync ()" link="gnome-keyring-Keyrings.html#gnome-keyring-create-sync"/>
+    <keyword type="function" name="gnome_keyring_unlock ()" link="gnome-keyring-Keyrings.html#gnome-keyring-unlock"/>
+    <keyword type="function" name="gnome_keyring_unlock_sync ()" link="gnome-keyring-Keyrings.html#gnome-keyring-unlock-sync"/>
+    <keyword type="function" name="gnome_keyring_lock ()" link="gnome-keyring-Keyrings.html#gnome-keyring-lock"/>
+    <keyword type="function" name="gnome_keyring_lock_sync ()" link="gnome-keyring-Keyrings.html#gnome-keyring-lock-sync"/>
+    <keyword type="function" name="gnome_keyring_delete ()" link="gnome-keyring-Keyrings.html#gnome-keyring-delete"/>
+    <keyword type="function" name="gnome_keyring_delete_sync ()" link="gnome-keyring-Keyrings.html#gnome-keyring-delete-sync"/>
+    <keyword type="function" name="gnome_keyring_get_info ()" link="gnome-keyring-Keyrings.html#gnome-keyring-get-info"/>
+    <keyword type="function" name="gnome_keyring_get_info_sync ()" link="gnome-keyring-Keyrings.html#gnome-keyring-get-info-sync"/>
+    <keyword type="function" name="gnome_keyring_set_info ()" link="gnome-keyring-Keyrings.html#gnome-keyring-set-info"/>
+    <keyword type="function" name="gnome_keyring_set_info_sync ()" link="gnome-keyring-Keyrings.html#gnome-keyring-set-info-sync"/>
+    <keyword type="function" name="gnome_keyring_change_password ()" link="gnome-keyring-Keyrings.html#gnome-keyring-change-password"/>
+    <keyword type="function" name="gnome_keyring_change_password_sync ()" link="gnome-keyring-Keyrings.html#gnome-keyring-change-password-sync"/>
+    <keyword type="function" name="gnome_keyring_list_item_ids ()" link="gnome-keyring-Keyrings.html#gnome-keyring-list-item-ids"/>
+    <keyword type="function" name="gnome_keyring_list_item_ids_sync ()" link="gnome-keyring-Keyrings.html#gnome-keyring-list-item-ids-sync"/>
+    <keyword type="typedef" name="GnomeKeyringInfo" link="gnome-keyring-Keyring-Info.html#GnomeKeyringInfo"/>
+    <keyword type="function" name="gnome_keyring_info_free ()" link="gnome-keyring-Keyring-Info.html#gnome-keyring-info-free"/>
+    <keyword type="function" name="gnome_keyring_info_copy ()" link="gnome-keyring-Keyring-Info.html#gnome-keyring-info-copy"/>
+    <keyword type="function" name="gnome_keyring_info_set_lock_on_idle ()" link="gnome-keyring-Keyring-Info.html#gnome-keyring-info-set-lock-on-idle"/>
+    <keyword type="function" name="gnome_keyring_info_get_lock_on_idle ()" link="gnome-keyring-Keyring-Info.html#gnome-keyring-info-get-lock-on-idle"/>
+    <keyword type="function" name="gnome_keyring_info_set_lock_timeout ()" link="gnome-keyring-Keyring-Info.html#gnome-keyring-info-set-lock-timeout"/>
+    <keyword type="function" name="gnome_keyring_info_get_lock_timeout ()" link="gnome-keyring-Keyring-Info.html#gnome-keyring-info-get-lock-timeout"/>
+    <keyword type="function" name="gnome_keyring_info_get_mtime ()" link="gnome-keyring-Keyring-Info.html#gnome-keyring-info-get-mtime"/>
+    <keyword type="function" name="gnome_keyring_info_get_ctime ()" link="gnome-keyring-Keyring-Info.html#gnome-keyring-info-get-ctime"/>
+    <keyword type="function" name="gnome_keyring_info_get_is_locked ()" link="gnome-keyring-Keyring-Info.html#gnome-keyring-info-get-is-locked"/>
+    <keyword type="enum" name="enum GnomeKeyringItemInfoFlags" link="gnome-keyring-Keyring-Items.html#GnomeKeyringItemInfoFlags"/>
+    <keyword type="function" name="GnomeKeyringOperationGetItemInfoCallback ()" link="gnome-keyring-Keyring-Items.html#GnomeKeyringOperationGetItemInfoCallback"/>
+    <keyword type="function" name="GnomeKeyringOperationGetAttributesCallback ()" link="gnome-keyring-Keyring-Items.html#GnomeKeyringOperationGetAttributesCallback"/>
+    <keyword type="function" name="gnome_keyring_item_create ()" link="gnome-keyring-Keyring-Items.html#gnome-keyring-item-create"/>
+    <keyword type="function" name="gnome_keyring_item_create_sync ()" link="gnome-keyring-Keyring-Items.html#gnome-keyring-item-create-sync"/>
+    <keyword type="function" name="gnome_keyring_item_delete ()" link="gnome-keyring-Keyring-Items.html#gnome-keyring-item-delete"/>
+    <keyword type="function" name="gnome_keyring_item_delete_sync ()" link="gnome-keyring-Keyring-Items.html#gnome-keyring-item-delete-sync"/>
+    <keyword type="function" name="gnome_keyring_item_get_info ()" link="gnome-keyring-Keyring-Items.html#gnome-keyring-item-get-info"/>
+    <keyword type="function" name="gnome_keyring_item_get_info_full ()" link="gnome-keyring-Keyring-Items.html#gnome-keyring-item-get-info-full"/>
+    <keyword type="function" name="gnome_keyring_item_get_info_full_sync ()" link="gnome-keyring-Keyring-Items.html#gnome-keyring-item-get-info-full-sync"/>
+    <keyword type="function" name="gnome_keyring_item_get_info_sync ()" link="gnome-keyring-Keyring-Items.html#gnome-keyring-item-get-info-sync"/>
+    <keyword type="function" name="gnome_keyring_item_set_info ()" link="gnome-keyring-Keyring-Items.html#gnome-keyring-item-set-info"/>
+    <keyword type="function" name="gnome_keyring_item_set_info_sync ()" link="gnome-keyring-Keyring-Items.html#gnome-keyring-item-set-info-sync"/>
+    <keyword type="function" name="gnome_keyring_item_get_attributes ()" link="gnome-keyring-Keyring-Items.html#gnome-keyring-item-get-attributes"/>
+    <keyword type="function" name="gnome_keyring_item_get_attributes_sync ()" link="gnome-keyring-Keyring-Items.html#gnome-keyring-item-get-attributes-sync"/>
+    <keyword type="function" name="gnome_keyring_item_set_attributes ()" link="gnome-keyring-Keyring-Items.html#gnome-keyring-item-set-attributes"/>
+    <keyword type="function" name="gnome_keyring_item_set_attributes_sync ()" link="gnome-keyring-Keyring-Items.html#gnome-keyring-item-set-attributes-sync"/>
     <keyword type="function" name="gnome_keyring_item_get_acl ()" link="gnome-keyring-Keyring-Items.html#gnome-keyring-item-get-acl" deprecated="Never returns any ACL values."/>
     <keyword type="function" name="gnome_keyring_item_get_acl_sync ()" link="gnome-keyring-Keyring-Items.html#gnome-keyring-item-get-acl-sync" deprecated="Never returns any acls."/>
     <keyword type="function" name="gnome_keyring_item_set_acl ()" link="gnome-keyring-Keyring-Items.html#gnome-keyring-item-set-acl" deprecated="This function no longer has any effect."/>
     <keyword type="function" name="gnome_keyring_item_set_acl_sync ()" link="gnome-keyring-Keyring-Items.html#gnome-keyring-item-set-acl-sync" deprecated="This function no longer has any effect."/>
     <keyword type="function" name="gnome_keyring_item_grant_access_rights ()" link="gnome-keyring-Keyring-Items.html#gnome-keyring-item-grant-access-rights" deprecated="This function no longer has any effect." since="2.20"/>
     <keyword type="function" name="gnome_keyring_item_grant_access_rights_sync ()" link="gnome-keyring-Keyring-Items.html#gnome-keyring-item-grant-access-rights-sync" deprecated="This function no longer has any effect."/>
-    <keyword type="macro" name="GNOME_KEYRING_ITEM_APPLICATION_SECRET" link="gnome-keyring-Keyring-Items.html#GNOME-KEYRING-ITEM-APPLICATION-SECRET:CAPS" deprecated=""/>
-    <keyword type="macro" name="GNOME_KEYRING_ITEM_INFO_ALL" link="gnome-keyring-Keyring-Items.html#GNOME-KEYRING-ITEM-INFO-ALL:CAPS" deprecated=""/>
-    <keyword type="macro" name="GNOME_KEYRING_ITEM_NO_TYPE" link="gnome-keyring-Keyring-Items.html#GNOME-KEYRING-ITEM-NO-TYPE:CAPS" deprecated=""/>
-    <keyword type="macro" name="GNOME_KEYRING_ITEM_TYPE_MASK" link="gnome-keyring-Keyring-Items.html#GNOME-KEYRING-ITEM-TYPE-MASK:CAPS" deprecated=""/>
-    <keyword type="enum" name="enum GnomeKeyringItemType" link="gnome-keyring-Item-Information.html#GnomeKeyringItemType" deprecated="Use #SecretSchema instead."/>
-    <keyword type="typedef" name="GnomeKeyringItemInfo" link="gnome-keyring-Item-Information.html#GnomeKeyringItemInfo" deprecated=""/>
-    <keyword type="function" name="gnome_keyring_item_info_free ()" link="gnome-keyring-Item-Information.html#gnome-keyring-item-info-free" deprecated="Use #SecretItem objects instead."/>
-    <keyword type="function" name="gnome_keyring_item_info_new ()" link="gnome-keyring-Item-Information.html#gnome-keyring-item-info-new" deprecated="Use #SecretItem objects instead."/>
-    <keyword type="function" name="gnome_keyring_item_info_copy ()" link="gnome-keyring-Item-Information.html#gnome-keyring-item-info-copy" deprecated="Use #SecretItem objects instead."/>
-    <keyword type="function" name="gnome_keyring_item_info_get_type ()" link="gnome-keyring-Item-Information.html#gnome-keyring-item-info-get-type" deprecated="Use secret_item_get_schema_name() instead."/>
-    <keyword type="function" name="gnome_keyring_item_info_set_type ()" link="gnome-keyring-Item-Information.html#gnome-keyring-item-info-set-type" deprecated="Use secret_item_set_attributes() instead."/>
-    <keyword type="function" name="gnome_keyring_item_info_get_secret ()" link="gnome-keyring-Item-Information.html#gnome-keyring-item-info-get-secret" deprecated="Use secret_item_get_secret() instead."/>
-    <keyword type="function" name="gnome_keyring_item_info_set_secret ()" link="gnome-keyring-Item-Information.html#gnome-keyring-item-info-set-secret" deprecated="Use secret_item_set_secret() instead."/>
-    <keyword type="function" name="gnome_keyring_item_info_get_display_name ()" link="gnome-keyring-Item-Information.html#gnome-keyring-item-info-get-display-name" deprecated="Use secret_item_get_label() instead."/>
-    <keyword type="function" name="gnome_keyring_item_info_set_display_name ()" link="gnome-keyring-Item-Information.html#gnome-keyring-item-info-set-display-name" deprecated="Use secret_item_set_label() instead."/>
-    <keyword type="function" name="gnome_keyring_item_info_get_mtime ()" link="gnome-keyring-Item-Information.html#gnome-keyring-item-info-get-mtime" deprecated="Use secret_item_get_modified() instead."/>
-    <keyword type="function" name="gnome_keyring_item_info_get_ctime ()" link="gnome-keyring-Item-Information.html#gnome-keyring-item-info-get-ctime" deprecated="Use secret_item_get_created() instead."/>
-    <keyword type="enum" name="enum GnomeKeyringAttributeType" link="gnome-keyring-Item-Attributes.html#GnomeKeyringAttributeType" deprecated=""/>
-    <keyword type="typedef" name="GnomeKeyringAttributeList" link="gnome-keyring-Item-Attributes.html#GnomeKeyringAttributeList" deprecated=""/>
-    <keyword type="struct" name="GnomeKeyringAttribute" link="gnome-keyring-Item-Attributes.html#GnomeKeyringAttribute" deprecated="libsecret only supports string attributes."/>
-    <keyword type="macro" name="gnome_keyring_attribute_list_index()" link="gnome-keyring-Item-Attributes.html#gnome-keyring-attribute-list-index" deprecated=""/>
-    <keyword type="function" name="gnome_keyring_attribute_list_new ()" link="gnome-keyring-Item-Attributes.html#gnome-keyring-attribute-list-new" deprecated=""/>
-    <keyword type="function" name="gnome_keyring_attribute_list_append_string ()" link="gnome-keyring-Item-Attributes.html#gnome-keyring-attribute-list-append-string" deprecated=""/>
-    <keyword type="function" name="gnome_keyring_attribute_list_append_uint32 ()" link="gnome-keyring-Item-Attributes.html#gnome-keyring-attribute-list-append-uint32" deprecated="libsecret does not support number attributes."/>
-    <keyword type="function" name="gnome_keyring_attribute_list_free ()" link="gnome-keyring-Item-Attributes.html#gnome-keyring-attribute-list-free" deprecated=""/>
-    <keyword type="function" name="gnome_keyring_attribute_list_copy ()" link="gnome-keyring-Item-Attributes.html#gnome-keyring-attribute-list-copy" deprecated="Not needed when using libsecret."/>
-    <keyword type="function" name="gnome_keyring_attribute_get_string ()" link="gnome-keyring-Item-Attributes.html#gnome-keyring-attribute-get-string" deprecated="Not needed when using libsecret."/>
-    <keyword type="function" name="gnome_keyring_attribute_get_uint32 ()" link="gnome-keyring-Item-Attributes.html#gnome-keyring-attribute-get-uint32" deprecated="Not needed when using libsecret."/>
+    <keyword type="macro" name="GNOME_KEYRING_ITEM_APPLICATION_SECRET" link="gnome-keyring-Keyring-Items.html#GNOME-KEYRING-ITEM-APPLICATION-SECRET:CAPS"/>
+    <keyword type="macro" name="GNOME_KEYRING_ITEM_INFO_ALL" link="gnome-keyring-Keyring-Items.html#GNOME-KEYRING-ITEM-INFO-ALL:CAPS"/>
+    <keyword type="macro" name="GNOME_KEYRING_ITEM_NO_TYPE" link="gnome-keyring-Keyring-Items.html#GNOME-KEYRING-ITEM-NO-TYPE:CAPS"/>
+    <keyword type="macro" name="GNOME_KEYRING_ITEM_TYPE_MASK" link="gnome-keyring-Keyring-Items.html#GNOME-KEYRING-ITEM-TYPE-MASK:CAPS"/>
+    <keyword type="enum" name="enum GnomeKeyringItemType" link="gnome-keyring-Item-Information.html#GnomeKeyringItemType"/>
+    <keyword type="typedef" name="GnomeKeyringItemInfo" link="gnome-keyring-Item-Information.html#GnomeKeyringItemInfo"/>
+    <keyword type="function" name="gnome_keyring_item_info_free ()" link="gnome-keyring-Item-Information.html#gnome-keyring-item-info-free"/>
+    <keyword type="function" name="gnome_keyring_item_info_new ()" link="gnome-keyring-Item-Information.html#gnome-keyring-item-info-new"/>
+    <keyword type="function" name="gnome_keyring_item_info_copy ()" link="gnome-keyring-Item-Information.html#gnome-keyring-item-info-copy"/>
+    <keyword type="function" name="gnome_keyring_item_info_get_type ()" link="gnome-keyring-Item-Information.html#gnome-keyring-item-info-get-type"/>
+    <keyword type="function" name="gnome_keyring_item_info_set_type ()" link="gnome-keyring-Item-Information.html#gnome-keyring-item-info-set-type"/>
+    <keyword type="function" name="gnome_keyring_item_info_get_secret ()" link="gnome-keyring-Item-Information.html#gnome-keyring-item-info-get-secret"/>
+    <keyword type="function" name="gnome_keyring_item_info_set_secret ()" link="gnome-keyring-Item-Information.html#gnome-keyring-item-info-set-secret"/>
+    <keyword type="function" name="gnome_keyring_item_info_get_display_name ()" link="gnome-keyring-Item-Information.html#gnome-keyring-item-info-get-display-name"/>
+    <keyword type="function" name="gnome_keyring_item_info_set_display_name ()" link="gnome-keyring-Item-Information.html#gnome-keyring-item-info-set-display-name"/>
+    <keyword type="function" name="gnome_keyring_item_info_get_mtime ()" link="gnome-keyring-Item-Information.html#gnome-keyring-item-info-get-mtime"/>
+    <keyword type="function" name="gnome_keyring_item_info_get_ctime ()" link="gnome-keyring-Item-Information.html#gnome-keyring-item-info-get-ctime"/>
+    <keyword type="enum" name="enum GnomeKeyringAttributeType" link="gnome-keyring-Item-Attributes.html#GnomeKeyringAttributeType"/>
+    <keyword type="typedef" name="GnomeKeyringAttributeList" link="gnome-keyring-Item-Attributes.html#GnomeKeyringAttributeList"/>
+    <keyword type="struct" name="GnomeKeyringAttribute" link="gnome-keyring-Item-Attributes.html#GnomeKeyringAttribute"/>
+    <keyword type="macro" name="gnome_keyring_attribute_list_index()" link="gnome-keyring-Item-Attributes.html#gnome-keyring-attribute-list-index"/>
+    <keyword type="function" name="gnome_keyring_attribute_list_new ()" link="gnome-keyring-Item-Attributes.html#gnome-keyring-attribute-list-new"/>
+    <keyword type="function" name="gnome_keyring_attribute_list_append_string ()" link="gnome-keyring-Item-Attributes.html#gnome-keyring-attribute-list-append-string"/>
+    <keyword type="function" name="gnome_keyring_attribute_list_append_uint32 ()" link="gnome-keyring-Item-Attributes.html#gnome-keyring-attribute-list-append-uint32"/>
+    <keyword type="function" name="gnome_keyring_attribute_list_free ()" link="gnome-keyring-Item-Attributes.html#gnome-keyring-attribute-list-free"/>
+    <keyword type="function" name="gnome_keyring_attribute_list_copy ()" link="gnome-keyring-Item-Attributes.html#gnome-keyring-attribute-list-copy"/>
+    <keyword type="function" name="gnome_keyring_attribute_get_string ()" link="gnome-keyring-Item-Attributes.html#gnome-keyring-attribute-get-string"/>
+    <keyword type="function" name="gnome_keyring_attribute_get_uint32 ()" link="gnome-keyring-Item-Attributes.html#gnome-keyring-attribute-get-uint32"/>
     <keyword type="typedef" name="GnomeKeyringAccessControl" link="gnome-keyring-Item-ACLs.html#GnomeKeyringAccessControl" deprecated=""/>
     <keyword type="typedef" name="GnomeKeyringApplicationRef" link="gnome-keyring-Item-ACLs.html#GnomeKeyringApplicationRef" deprecated=""/>
-    <keyword type="enum" name="enum GnomeKeyringAccessType" link="gnome-keyring-Item-ACLs.html#GnomeKeyringAccessType" deprecated="libsecret only supports string attributes."/>
-    <keyword type="enum" name="enum GnomeKeyringAccessRestriction" link="gnome-keyring-Item-ACLs.html#GnomeKeyringAccessRestriction" deprecated="No permission prompts are supported."/>
-    <keyword type="function" name="gnome_keyring_application_ref_new ()" link="gnome-keyring-Item-ACLs.html#gnome-keyring-application-ref-new" deprecated="Not needed when using libsecret."/>
-    <keyword type="function" name="gnome_keyring_application_ref_copy ()" link="gnome-keyring-Item-ACLs.html#gnome-keyring-application-ref-copy" deprecated="Not needed when using libsecret."/>
-    <keyword type="function" name="gnome_keyring_application_ref_free ()" link="gnome-keyring-Item-ACLs.html#gnome-keyring-application-ref-free" deprecated="Not needed when using libsecret."/>
-    <keyword type="function" name="gnome_keyring_access_control_new ()" link="gnome-keyring-Item-ACLs.html#gnome-keyring-access-control-new" deprecated="Not needed when using libsecret."/>
-    <keyword type="function" name="gnome_keyring_access_control_copy ()" link="gnome-keyring-Item-ACLs.html#gnome-keyring-access-control-copy" deprecated="Not needed when using libsecret."/>
-    <keyword type="function" name="gnome_keyring_access_control_free ()" link="gnome-keyring-Item-ACLs.html#gnome-keyring-access-control-free" deprecated="Not needed when using libsecret."/>
-    <keyword type="function" name="gnome_keyring_acl_copy ()" link="gnome-keyring-Item-ACLs.html#gnome-keyring-acl-copy" deprecated="Not needed when using libsecret."/>
-    <keyword type="function" name="gnome_keyring_acl_free ()" link="gnome-keyring-Item-ACLs.html#gnome-keyring-acl-free" deprecated="Not needed when using libsecret."/>
-    <keyword type="function" name="gnome_keyring_item_ac_get_display_name ()" link="gnome-keyring-Item-ACLs.html#gnome-keyring-item-ac-get-display-name" deprecated="Not supported when using libsecret."/>
-    <keyword type="function" name="gnome_keyring_item_ac_set_display_name ()" link="gnome-keyring-Item-ACLs.html#gnome-keyring-item-ac-set-display-name" deprecated="Not supported when using libsecret."/>
-    <keyword type="function" name="gnome_keyring_item_ac_get_path_name ()" link="gnome-keyring-Item-ACLs.html#gnome-keyring-item-ac-get-path-name" deprecated="Not supported when using libsecret."/>
-    <keyword type="function" name="gnome_keyring_item_ac_set_path_name ()" link="gnome-keyring-Item-ACLs.html#gnome-keyring-item-ac-set-path-name" deprecated="Not supported when using libsecret."/>
-    <keyword type="function" name="gnome_keyring_item_ac_get_access_type ()" link="gnome-keyring-Item-ACLs.html#gnome-keyring-item-ac-get-access-type" deprecated="Not supported when using libsecret."/>
-    <keyword type="function" name="gnome_keyring_item_ac_set_access_type ()" link="gnome-keyring-Item-ACLs.html#gnome-keyring-item-ac-set-access-type" deprecated="Not supported when using libsecret."/>
-    <keyword type="struct" name="GnomeKeyringFound" link="gnome-keyring-Search-Functionality.html#GnomeKeyringFound" deprecated="Not used with libsecret."/>
-    <keyword type="function" name="gnome_keyring_found_copy ()" link="gnome-keyring-Search-Functionality.html#gnome-keyring-found-copy" deprecated="Not needed when using libsecret."/>
-    <keyword type="function" name="gnome_keyring_found_free ()" link="gnome-keyring-Search-Functionality.html#gnome-keyring-found-free" deprecated="Deprecated: Not needed when using libsecret."/>
-    <keyword type="function" name="gnome_keyring_found_list_free ()" link="gnome-keyring-Search-Functionality.html#gnome-keyring-found-list-free" deprecated="Not needed when using libsecret."/>
-    <keyword type="function" name="gnome_keyring_find_items ()" link="gnome-keyring-Search-Functionality.html#gnome-keyring-find-items" deprecated="Use secret_password_lookup() or secret_service_search() instead."/>
-    <keyword type="function" name="gnome_keyring_find_itemsv ()" link="gnome-keyring-Search-Functionality.html#gnome-keyring-find-itemsv" deprecated="Use secret_password_lookup() or secret_service_search() instead."/>
-    <keyword type="function" name="gnome_keyring_find_items_sync ()" link="gnome-keyring-Search-Functionality.html#gnome-keyring-find-items-sync" deprecated="Use secret_password_lookup_sync() or secret_service_search_sync() instead."/>
-    <keyword type="function" name="gnome_keyring_find_itemsv_sync ()" link="gnome-keyring-Search-Functionality.html#gnome-keyring-find-itemsv-sync" deprecated="Use secret_password_lookup_sync() or secret_service_search_sync() instead."/>
-    <keyword type="struct" name="GnomeKeyringNetworkPasswordData" link="gnome-keyring-Network-Passwords.html#GnomeKeyringNetworkPasswordData" deprecated="Use #SECRET_SCHEMA_COMPAT_NETWORK instead."/>
-    <keyword type="function" name="gnome_keyring_network_password_free ()" link="gnome-keyring-Network-Passwords.html#gnome-keyring-network-password-free" deprecated="Not used with libsecret."/>
-    <keyword type="function" name="gnome_keyring_network_password_list_free ()" link="gnome-keyring-Network-Passwords.html#gnome-keyring-network-password-list-free" deprecated="Not used with libsecret."/>
-    <keyword type="function" name="gnome_keyring_find_network_password ()" link="gnome-keyring-Network-Passwords.html#gnome-keyring-find-network-password" deprecated="Use secret_password_lookup() with %SECRET_SCHEMA_COMPAT_NETWORK."/>
-    <keyword type="function" name="gnome_keyring_find_network_password_sync ()" link="gnome-keyring-Network-Passwords.html#gnome-keyring-find-network-password-sync" deprecated="Use secret_password_lookup_sync() with %SECRET_SCHEMA_COMPAT_NETWORK."/>
-    <keyword type="function" name="gnome_keyring_set_network_password ()" link="gnome-keyring-Network-Passwords.html#gnome-keyring-set-network-password" deprecated="Use secret_password_store() with %SECRET_SCHEMA_COMPAT_NETWORK."/>
-    <keyword type="function" name="gnome_keyring_set_network_password_sync ()" link="gnome-keyring-Network-Passwords.html#gnome-keyring-set-network-password-sync" deprecated="Use secret_password_store_sync() with %SECRET_SCHEMA_COMPAT_NETWORK."/>
-    <keyword type="macro" name="gnome_keyring_memory_new()" link="gnome-keyring-Non-pageable-Memory.html#gnome-keyring-memory-new" deprecated="Use gcr_secure_memory_alloc() instead."/>
-    <keyword type="function" name="gnome_keyring_memory_alloc ()" link="gnome-keyring-Non-pageable-Memory.html#gnome-keyring-memory-alloc" deprecated="Use gcr_secure_memory_alloc() instead."/>
-    <keyword type="function" name="gnome_keyring_memory_try_alloc ()" link="gnome-keyring-Non-pageable-Memory.html#gnome-keyring-memory-try-alloc" deprecated="Use gcr_secure_memory_try_alloc() instead."/>
-    <keyword type="function" name="gnome_keyring_memory_realloc ()" link="gnome-keyring-Non-pageable-Memory.html#gnome-keyring-memory-realloc" deprecated="Use gcr_secure_memory_realloc() instead."/>
-    <keyword type="function" name="gnome_keyring_memory_try_realloc ()" link="gnome-keyring-Non-pageable-Memory.html#gnome-keyring-memory-try-realloc" deprecated="Use gcr_secure_memory_try_realloc() instead."/>
-    <keyword type="function" name="gnome_keyring_memory_free ()" link="gnome-keyring-Non-pageable-Memory.html#gnome-keyring-memory-free" deprecated="Use gcr_secure_memory_free() instead."/>
-    <keyword type="function" name="gnome_keyring_memory_is_secure ()" link="gnome-keyring-Non-pageable-Memory.html#gnome-keyring-memory-is-secure" deprecated="Use gcr_secure_memory_is_secure() instead."/>
-    <keyword type="function" name="gnome_keyring_memory_strdup ()" link="gnome-keyring-Non-pageable-Memory.html#gnome-keyring-memory-strdup" deprecated="Use gcr_secure_memory_strdup() instead."/>
-    <keyword type="function" name="gnome_keyring_result_to_message ()" link="gnome-keyring-Result-Codes.html#gnome-keyring-result-to-message" deprecated=""/>
-    <keyword type="enum" name="enum GnomeKeyringResult" link="gnome-keyring-Result-Codes.html#GnomeKeyringResult" deprecated="Errors are returned from libsecret functions as #GError."/>
-    <keyword type="macro" name="GNOME_KEYRING_RESULT_ALREADY_EXISTS" link="gnome-keyring-Result-Codes.html#GNOME-KEYRING-RESULT-ALREADY-EXISTS:CAPS" deprecated=""/>
-    <keyword type="function" name="gnome_keyring_is_available ()" link="gnome-keyring-Miscellaneous-Functions.html#gnome-keyring-is-available" deprecated=""/>
-    <keyword type="function" name="gnome_keyring_cancel_request ()" link="gnome-keyring-Miscellaneous-Functions.html#gnome-keyring-cancel-request" deprecated=""/>
-    <keyword type="function" name="gnome_keyring_string_list_free ()" link="gnome-keyring-Miscellaneous-Functions.html#gnome-keyring-string-list-free" deprecated="Not needed when using libsecret."/>
-    <keyword type="macro" name="GNOME_KEYRING_DEPRECATED" link="gnome-keyring-Miscellaneous-Functions.html#GNOME-KEYRING-DEPRECATED:CAPS"/>
-    <keyword type="macro" name="GNOME_KEYRING_DEPRECATED_FOR()" link="gnome-keyring-Miscellaneous-Functions.html#GNOME-KEYRING-DEPRECATED-FOR:CAPS"/>
-    <keyword type="function" name="gnome_keyring_daemon_set_display_sync ()" link="gnome-keyring-Daemon-Management-Functions.html#gnome-keyring-daemon-set-display-sync" deprecated="No longer supported, always fails."/>
-    <keyword type="function" name="gnome_keyring_daemon_prepare_environment_sync ()" link="gnome-keyring-Daemon-Management-Functions.html#gnome-keyring-daemon-prepare-environment-sync" deprecated="No longer supported, call is ignored."/>
-    <keyword type="function" name="GnomeKeyringOperationDoneCallback ()" link="gnome-keyring-Callbacks.html#GnomeKeyringOperationDoneCallback" deprecated=""/>
-    <keyword type="function" name="GnomeKeyringOperationGetIntCallback ()" link="gnome-keyring-Callbacks.html#GnomeKeyringOperationGetIntCallback" deprecated=""/>
-    <keyword type="function" name="GnomeKeyringOperationGetListCallback ()" link="gnome-keyring-Callbacks.html#GnomeKeyringOperationGetListCallback" deprecated=""/>
-    <keyword type="function" name="GnomeKeyringOperationGetStringCallback ()" link="gnome-keyring-Callbacks.html#GnomeKeyringOperationGetStringCallback" deprecated=""/>
+    <keyword type="enum" name="enum GnomeKeyringAccessType" link="gnome-keyring-Item-ACLs.html#GnomeKeyringAccessType" deprecated=""/>
+    <keyword type="enum" name="enum GnomeKeyringAccessRestriction" link="gnome-keyring-Item-ACLs.html#GnomeKeyringAccessRestriction" deprecated=""/>
+    <keyword type="function" name="gnome_keyring_application_ref_new ()" link="gnome-keyring-Item-ACLs.html#gnome-keyring-application-ref-new" deprecated=""/>
+    <keyword type="function" name="gnome_keyring_application_ref_copy ()" link="gnome-keyring-Item-ACLs.html#gnome-keyring-application-ref-copy" deprecated=""/>
+    <keyword type="function" name="gnome_keyring_application_ref_free ()" link="gnome-keyring-Item-ACLs.html#gnome-keyring-application-ref-free" deprecated=""/>
+    <keyword type="function" name="gnome_keyring_access_control_new ()" link="gnome-keyring-Item-ACLs.html#gnome-keyring-access-control-new" deprecated=""/>
+    <keyword type="function" name="gnome_keyring_access_control_copy ()" link="gnome-keyring-Item-ACLs.html#gnome-keyring-access-control-copy" deprecated=""/>
+    <keyword type="function" name="gnome_keyring_access_control_free ()" link="gnome-keyring-Item-ACLs.html#gnome-keyring-access-control-free" deprecated=""/>
+    <keyword type="function" name="gnome_keyring_acl_copy ()" link="gnome-keyring-Item-ACLs.html#gnome-keyring-acl-copy" deprecated=""/>
+    <keyword type="function" name="gnome_keyring_acl_free ()" link="gnome-keyring-Item-ACLs.html#gnome-keyring-acl-free" deprecated=""/>
+    <keyword type="function" name="gnome_keyring_item_ac_get_display_name ()" link="gnome-keyring-Item-ACLs.html#gnome-keyring-item-ac-get-display-name" deprecated=""/>
+    <keyword type="function" name="gnome_keyring_item_ac_set_display_name ()" link="gnome-keyring-Item-ACLs.html#gnome-keyring-item-ac-set-display-name" deprecated=""/>
+    <keyword type="function" name="gnome_keyring_item_ac_get_path_name ()" link="gnome-keyring-Item-ACLs.html#gnome-keyring-item-ac-get-path-name" deprecated=""/>
+    <keyword type="function" name="gnome_keyring_item_ac_set_path_name ()" link="gnome-keyring-Item-ACLs.html#gnome-keyring-item-ac-set-path-name" deprecated=""/>
+    <keyword type="function" name="gnome_keyring_item_ac_get_access_type ()" link="gnome-keyring-Item-ACLs.html#gnome-keyring-item-ac-get-access-type" deprecated=""/>
+    <keyword type="function" name="gnome_keyring_item_ac_set_access_type ()" link="gnome-keyring-Item-ACLs.html#gnome-keyring-item-ac-set-access-type" deprecated=""/>
+    <keyword type="struct" name="GnomeKeyringFound" link="gnome-keyring-Search-Functionality.html#GnomeKeyringFound"/>
+    <keyword type="function" name="gnome_keyring_found_copy ()" link="gnome-keyring-Search-Functionality.html#gnome-keyring-found-copy"/>
+    <keyword type="function" name="gnome_keyring_found_free ()" link="gnome-keyring-Search-Functionality.html#gnome-keyring-found-free"/>
+    <keyword type="function" name="gnome_keyring_found_list_free ()" link="gnome-keyring-Search-Functionality.html#gnome-keyring-found-list-free"/>
+    <keyword type="function" name="gnome_keyring_find_items ()" link="gnome-keyring-Search-Functionality.html#gnome-keyring-find-items"/>
+    <keyword type="function" name="gnome_keyring_find_itemsv ()" link="gnome-keyring-Search-Functionality.html#gnome-keyring-find-itemsv"/>
+    <keyword type="function" name="gnome_keyring_find_items_sync ()" link="gnome-keyring-Search-Functionality.html#gnome-keyring-find-items-sync"/>
+    <keyword type="function" name="gnome_keyring_find_itemsv_sync ()" link="gnome-keyring-Search-Functionality.html#gnome-keyring-find-itemsv-sync"/>
+    <keyword type="struct" name="GnomeKeyringNetworkPasswordData" link="gnome-keyring-Network-Passwords.html#GnomeKeyringNetworkPasswordData"/>
+    <keyword type="function" name="gnome_keyring_network_password_free ()" link="gnome-keyring-Network-Passwords.html#gnome-keyring-network-password-free"/>
+    <keyword type="function" name="gnome_keyring_network_password_list_free ()" link="gnome-keyring-Network-Passwords.html#gnome-keyring-network-password-list-free"/>
+    <keyword type="function" name="gnome_keyring_find_network_password ()" link="gnome-keyring-Network-Passwords.html#gnome-keyring-find-network-password"/>
+    <keyword type="function" name="gnome_keyring_find_network_password_sync ()" link="gnome-keyring-Network-Passwords.html#gnome-keyring-find-network-password-sync"/>
+    <keyword type="function" name="gnome_keyring_set_network_password ()" link="gnome-keyring-Network-Passwords.html#gnome-keyring-set-network-password"/>
+    <keyword type="function" name="gnome_keyring_set_network_password_sync ()" link="gnome-keyring-Network-Passwords.html#gnome-keyring-set-network-password-sync"/>
+    <keyword type="macro" name="gnome_keyring_memory_new()" link="gnome-keyring-Non-pageable-Memory.html#gnome-keyring-memory-new"/>
+    <keyword type="function" name="gnome_keyring_memory_alloc ()" link="gnome-keyring-Non-pageable-Memory.html#gnome-keyring-memory-alloc"/>
+    <keyword type="function" name="gnome_keyring_memory_try_alloc ()" link="gnome-keyring-Non-pageable-Memory.html#gnome-keyring-memory-try-alloc"/>
+    <keyword type="function" name="gnome_keyring_memory_realloc ()" link="gnome-keyring-Non-pageable-Memory.html#gnome-keyring-memory-realloc"/>
+    <keyword type="function" name="gnome_keyring_memory_try_realloc ()" link="gnome-keyring-Non-pageable-Memory.html#gnome-keyring-memory-try-realloc"/>
+    <keyword type="function" name="gnome_keyring_memory_free ()" link="gnome-keyring-Non-pageable-Memory.html#gnome-keyring-memory-free"/>
+    <keyword type="function" name="gnome_keyring_memory_is_secure ()" link="gnome-keyring-Non-pageable-Memory.html#gnome-keyring-memory-is-secure"/>
+    <keyword type="function" name="gnome_keyring_memory_strdup ()" link="gnome-keyring-Non-pageable-Memory.html#gnome-keyring-memory-strdup"/>
+    <keyword type="function" name="gnome_keyring_result_to_message ()" link="gnome-keyring-Result-Codes.html#gnome-keyring-result-to-message"/>
+    <keyword type="enum" name="enum GnomeKeyringResult" link="gnome-keyring-Result-Codes.html#GnomeKeyringResult"/>
+    <keyword type="macro" name="GNOME_KEYRING_RESULT_ALREADY_EXISTS" link="gnome-keyring-Result-Codes.html#GNOME-KEYRING-RESULT-ALREADY-EXISTS:CAPS"/>
+    <keyword type="function" name="gnome_keyring_is_available ()" link="gnome-keyring-Miscellaneous-Functions.html#gnome-keyring-is-available"/>
+    <keyword type="function" name="gnome_keyring_cancel_request ()" link="gnome-keyring-Miscellaneous-Functions.html#gnome-keyring-cancel-request"/>
+    <keyword type="function" name="gnome_keyring_string_list_free ()" link="gnome-keyring-Miscellaneous-Functions.html#gnome-keyring-string-list-free"/>
+    <keyword type="function" name="gnome_keyring_daemon_set_display_sync ()" link="gnome-keyring-Daemon-Management-Functions.html#gnome-keyring-daemon-set-display-sync" deprecated=""/>
+    <keyword type="function" name="gnome_keyring_daemon_prepare_environment_sync ()" link="gnome-keyring-Daemon-Management-Functions.html#gnome-keyring-daemon-prepare-environment-sync" deprecated=""/>
+    <keyword type="function" name="GnomeKeyringOperationDoneCallback ()" link="gnome-keyring-Callbacks.html#GnomeKeyringOperationDoneCallback"/>
+    <keyword type="function" name="GnomeKeyringOperationGetIntCallback ()" link="gnome-keyring-Callbacks.html#GnomeKeyringOperationGetIntCallback"/>
+    <keyword type="function" name="GnomeKeyringOperationGetListCallback ()" link="gnome-keyring-Callbacks.html#GnomeKeyringOperationGetListCallback"/>
+    <keyword type="function" name="GnomeKeyringOperationGetStringCallback ()" link="gnome-keyring-Callbacks.html#GnomeKeyringOperationGetStringCallback"/>
     <keyword type="constant" name="GNOME_KEYRING_ITEM_INFO_BASICS" link="gnome-keyring-Keyring-Items.html#GNOME-KEYRING-ITEM-INFO-BASICS:CAPS"/>
     <keyword type="constant" name="GNOME_KEYRING_ITEM_INFO_SECRET" link="gnome-keyring-Keyring-Items.html#GNOME-KEYRING-ITEM-INFO-SECRET:CAPS"/>
     <keyword type="constant" name="GNOME_KEYRING_ITEM_GENERIC_SECRET" link="gnome-keyring-Item-Information.html#GNOME-KEYRING-ITEM-GENERIC-SECRET:CAPS"/>

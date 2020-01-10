@@ -63,10 +63,6 @@ typedef gboolean (*DecodePathCallback) (const char *, gpointer);
  * SECTION:gnome-keyring-generic-callbacks
  * @title: Callbacks
  * @short_description: Different callbacks for retrieving async results
- *
- * <warning>All of these APIs are deprecated. Use
- * <ulink href="http://developer.gnome.org/libsecret/stable/">libsecret</ulink>
- * instead.</warning>
  */
 
 static DBusMessage*
@@ -482,10 +478,6 @@ encode_attribute_list (DBusMessageIter *iter, GnomeKeyringAttributeList *attrs)
  * SECTION:gnome-keyring-misc
  * @title: Miscellaneous Functions
  * @short_description: Miscellaneous functions.
- *
- * All of these APIs are deprecated. Use
- * <ulink href="http://developer.gnome.org/libsecret/stable/">libsecret</ulink>
- * instead.
  **/
 
 /**
@@ -495,9 +487,6 @@ encode_attribute_list (DBusMessageIter *iter, GnomeKeyringAttributeList *attrs)
  *
  * Return value: %FALSE if you can't communicate with the daemon (so you
  * can't load and save passwords).
- *
- * Deprecated: Not needed when using libsecret. The gnome-keyring daemon is
- *             automatically started as needed.
  **/
 gboolean
 gnome_keyring_is_available (void)
@@ -524,9 +513,6 @@ gnome_keyring_is_available (void)
  *
  * If a callback was registered when making the asynchronous request, that callback
  * function will be called with a result of %GNOME_KEYRING_RESULT_CANCELLED
- *
- * Deprecated: When using libsecret, use #GCancellable to cancel asynchronous
- *             requests.
  **/
 void
 gnome_keyring_cancel_request (gpointer request)
@@ -543,10 +529,6 @@ gnome_keyring_cancel_request (gpointer request)
  * SECTION:gnome-keyring-keyrings
  * @title: Keyrings
  * @short_description: Listing and managing keyrings
- *
- * <warning>All of these APIs are deprecated. Use
- * <ulink href="http://developer.gnome.org/libsecret/stable/">libsecret</ulink>
- * instead.</warning>
  *
  * <code>gnome-keyring-daemon</code> manages multiple keyrings. Each keyring can
  * store one or more items containing secrets.
@@ -602,8 +584,6 @@ set_default_keyring_start (const gchar *keyring, GnomeKeyringOperationDoneCallba
  *
  * Return value: (transfer none): The asynchronous request, which can be passed
  * to gnome_keyring_cancel_request().
- *
- * Deprecated: Use secret_service_set_alias() instead.
  **/
 gpointer
 gnome_keyring_set_default_keyring (const gchar                             *keyring,
@@ -629,8 +609,6 @@ gnome_keyring_set_default_keyring (const gchar                             *keyr
  *
  * Return value: %GNOME_KEYRING_RESULT_OK if the operation was succcessful or
  * an error result otherwise.
- *
- * Deprecated: Use secret_service_set_alias_sync() instead.
  **/
 GnomeKeyringResult
 gnome_keyring_set_default_keyring_sync (const char *keyring)
@@ -723,8 +701,6 @@ get_default_keyring_start (GnomeKeyringOperationGetStringCallback callback,
  *
  * Return value: (transfer none): The asynchronous request, which can be passed
  * to gnome_keyring_cancel_request().
- *
- * Deprecated: Use secret_collection_for_alias() instead.
  **/
 gpointer
 gnome_keyring_get_default_keyring (GnomeKeyringOperationGetStringCallback  callback,
@@ -751,8 +727,6 @@ gnome_keyring_get_default_keyring (GnomeKeyringOperationGetStringCallback  callb
  *
  * Return value: %GNOME_KEYRING_RESULT_OK if the operation was succcessful or
  * an error result otherwise.
- *
- * Deprecated: Use secret_collection_for_alias_sync() instead.
  **/
 GnomeKeyringResult
 gnome_keyring_get_default_keyring_sync (char **keyring)
@@ -852,8 +826,6 @@ list_keyring_names_start (GnomeKeyringOperationGetListCallback callback,
  *
  * Return value: (transfer none): The asynchronous request, which can be passed
  * to gnome_keyring_cancel_request().
- *
- * Deprecated: Use secret_service_get_collections() instead.
  **/
 gpointer
 gnome_keyring_list_keyring_names (GnomeKeyringOperationGetListCallback    callback,
@@ -881,8 +853,6 @@ gnome_keyring_list_keyring_names (GnomeKeyringOperationGetListCallback    callba
  *
  * Return value: %GNOME_KEYRING_RESULT_OK if the operation was succcessful or
  * an error result otherwise.
- *
- * Deprecated: Use secret_service_get_collections() instead.
  **/
 GnomeKeyringResult
 gnome_keyring_list_keyring_names_sync (GList **keyrings)
@@ -905,8 +875,6 @@ lock_all_start (GnomeKeyringOperationDoneCallback callback,
 	GkrOperation *op;
 
 	g_return_val_if_fail (callback, NULL);
-
-	gkr_debug ("Calling o.f.S.Service.LockService");
 
 	req = dbus_message_new_method_call (gkr_service_name, SERVICE_PATH,
 	                                    SERVICE_INTERFACE, "LockService");
@@ -932,8 +900,6 @@ lock_all_start (GnomeKeyringOperationDoneCallback callback,
  *
  * Return value: (transfer none): The asynchronous request, which can be passed
  * to gnome_keyring_cancel_request().
- *
- * Deprecated: Use libsecret instead.
  **/
 gpointer
 gnome_keyring_lock_all (GnomeKeyringOperationDoneCallback       callback,
@@ -958,8 +924,6 @@ gnome_keyring_lock_all (GnomeKeyringOperationDoneCallback       callback,
  *
  * Return value: %GNOME_KEYRING_RESULT_OK if the operation was succcessful or
  * an error result otherwise.
- *
- * Deprecated: Use libsecret instead.
  **/
 GnomeKeyringResult
 gnome_keyring_lock_all_sync (void)
@@ -1142,8 +1106,6 @@ create_keyring_start (const char *keyring_name, const char *password,
  *
  * Return value: (transfer none): The asynchronous request, which can be passed
  * to gnome_keyring_cancel_request().
- *
- * Deprecated: Use secret_collection_create() instead.
  **/
 gpointer
 gnome_keyring_create (const char                                  *keyring_name,
@@ -1174,8 +1136,6 @@ gnome_keyring_create (const char                                  *keyring_name,
  *
  * Return value: %GNOME_KEYRING_RESULT_OK if the operation was succcessful or
  * an error result otherwise.
- *
- * Deprecated: Use secret_collection_create_sync() instead.
  **/
 GnomeKeyringResult
 gnome_keyring_create_sync (const char *keyring_name,
@@ -1377,8 +1337,6 @@ unlock_keyring_start (const char *keyring, const char *password,
  *
  * Return value: (transfer none): The asynchronous request, which can be passed
  * to gnome_keyring_cancel_request().
- *
- * Deprecated: Use secret_service_unlock() instead.
  **/
 gpointer
 gnome_keyring_unlock (const char                                  *keyring,
@@ -1413,8 +1371,6 @@ gnome_keyring_unlock (const char                                  *keyring,
  *
  * Return value: %GNOME_KEYRING_RESULT_OK if the operation was succcessful or
  * an error result otherwise.
- *
- * Deprecated: Use secret_service_unlock_sync() instead.
  **/
 GnomeKeyringResult
 gnome_keyring_unlock_sync (const char *keyring,
@@ -1455,8 +1411,6 @@ lock_keyring_start (const char *keyring, GnomeKeyringOperationDoneCallback callb
  *
  * Return value: (transfer none): The asynchronous request, which can be passed
  * to gnome_keyring_cancel_request().
- *
- * Deprecated: Use secret_service_lock() instead.
  **/
 gpointer
 gnome_keyring_lock (const char                                  *keyring,
@@ -1487,8 +1441,6 @@ gnome_keyring_lock (const char                                  *keyring,
  *
  * Return value: %GNOME_KEYRING_RESULT_OK if the operation was succcessful or
  * an error result otherwise.
- *
- * Deprecated: Use secret_service_lock_sync() instead.
  **/
 GnomeKeyringResult
 gnome_keyring_lock_sync (const char *keyring)
@@ -1538,8 +1490,6 @@ delete_keyring_start (const char *keyring, GnomeKeyringOperationDoneCallback cal
  *
  * Return value: (transfer none): The asynchronous request, which can be passed
  * to gnome_keyring_cancel_request().
- *
- * Deprecated: Use secret_collection_delete() instead.
  **/
 gpointer
 gnome_keyring_delete (const char                                  *keyring,
@@ -1566,8 +1516,6 @@ gnome_keyring_delete (const char                                  *keyring,
  *
  * Return value: %GNOME_KEYRING_RESULT_OK if the operation was succcessful or
  * an error result otherwise.
- *
- * Deprecated: Use secret_collection_delete_sync() instead.
  **/
 GnomeKeyringResult
 gnome_keyring_delete_sync (const char *keyring)
@@ -1730,8 +1678,6 @@ change_password_start (const char *keyring, const char *original, const char *pa
  *
  * Return value: (transfer none): The asynchronous request, which can be passed
  * to gnome_keyring_cancel_request().
- *
- * Deprecated: Not used with libsecret.
  **/
 gpointer
 gnome_keyring_change_password (const char                                  *keyring,
@@ -1766,8 +1712,6 @@ gnome_keyring_change_password (const char                                  *keyr
  *
  * Return value: %GNOME_KEYRING_RESULT_OK if the operation was succcessful or
  * an error result otherwise.
- *
- * Deprecated: Not used with libsecret.
  **/
 GnomeKeyringResult
 gnome_keyring_change_password_sync (const char *keyring_name,
@@ -1902,8 +1846,6 @@ get_keyring_info_start (const char *keyring, GnomeKeyringOperationGetKeyringInfo
  *
  * Return value: (transfer none): The asynchronous request, which can be passed
  * to gnome_keyring_cancel_request().
- *
- * Deprecated: Use #SecretCollection objects instead.
  **/
 gpointer
 gnome_keyring_get_info (const char                                  *keyring,
@@ -1934,8 +1876,6 @@ gnome_keyring_get_info (const char                                  *keyring,
  *
  * Return value: %GNOME_KEYRING_RESULT_OK if the operation was succcessful or
  * an error result otherwise.
- *
- * Deprecated: Use #SecretCollection objects instead.
  **/
 GnomeKeyringResult
 gnome_keyring_get_info_sync (const char        *keyring,
@@ -1994,8 +1934,6 @@ set_keyring_info_start (const char *keyring, GnomeKeyringInfo *info,
  *
  * Return value: (transfer none): The asynchronous request, which can be passed
  * to gnome_keyring_cancel_request().
- *
- * Deprecated: Use #SecretCollection objects instead.
  **/
 gpointer
 gnome_keyring_set_info (const char                                  *keyring,
@@ -2025,8 +1963,6 @@ gnome_keyring_set_info (const char                                  *keyring,
  *
  * Return value: %GNOME_KEYRING_RESULT_OK if the operation was succcessful or
  * an error result otherwise.
- *
- * Deprecated: Use #SecretCollection objects instead.
  **/
 GnomeKeyringResult
 gnome_keyring_set_info_sync (const char       *keyring,
@@ -2144,8 +2080,6 @@ list_item_ids_start (const char *keyring, GnomeKeyringOperationGetListCallback c
  *
  * Return value: (transfer none): The asynchronous request, which can be passed
  * to gnome_keyring_cancel_request().
- *
- * Deprecated: Use secret_collection_get_items() instead.
  **/
 gpointer
 gnome_keyring_list_item_ids (const char                                  *keyring,
@@ -2177,8 +2111,6 @@ gnome_keyring_list_item_ids (const char                                  *keyrin
  *
  * Return value: %GNOME_KEYRING_RESULT_OK if the operation was succcessful or
  * an error result otherwise.
- *
- * Deprecated: Use secret_collection_get_items() instead.
  **/
 GnomeKeyringResult
 gnome_keyring_list_item_ids_sync (const char  *keyring,
@@ -2199,10 +2131,6 @@ gnome_keyring_list_item_ids_sync (const char  *keyring,
  * @title: Daemon Management Functions
  * @short_description: Functions used by session to run the Gnome Keyring Daemon.
  *
- * <warning>All of these APIs are deprecated. Use
- * <ulink href="http://developer.gnome.org/libsecret/stable/">libsecret</ulink>
- * instead.</warning>
- *
  * These functions are not used by most applications using Gnome Keyring.
  **/
 
@@ -2210,7 +2138,7 @@ gnome_keyring_list_item_ids_sync (const char  *keyring,
  * gnome_keyring_daemon_set_display_sync:
  * @display: Deprecated
  *
- * Deprecated: No longer supported, always fails.
+ * Deprecated. No longer supported, always fails.
  *
  * Return value: GNOME_KEYRING_RESULT_DENIED
  **/
@@ -2224,7 +2152,7 @@ gnome_keyring_daemon_set_display_sync (const char *display)
 /**
  * gnome_keyring_daemon_prepare_environment_sync:
  *
- * Deprecated: No longer supported, call is ignored.
+ * Deprecated. No longer supported, call is ignored.
  *
  * Return value: GNOME_KEYRING_RESULT_OK
  **/
@@ -2238,10 +2166,6 @@ gnome_keyring_daemon_prepare_environment_sync (void)
  * SECTION:gnome-keyring-find
  * @title: Search Functionality
  * @short_description: Find Keyring Items
- *
- * <warning>All of these APIs are deprecated. Use
- * <ulink href="http://developer.gnome.org/libsecret/stable/">libsecret</ulink>
- * instead.</warning>
  *
  * A find operation searches through all keyrings for items that match the
  * attributes. The user may have been prompted to unlock necessary keyrings, and
@@ -2609,8 +2533,6 @@ find_items_start (GnomeKeyringItemType type, GnomeKeyringAttributeList *attribut
  *
  * Return value: (transfer none): The asynchronous request, which can be passed
  * to gnome_keyring_cancel_request().
- *
- * Deprecated: Use secret_password_lookup() or secret_service_search() instead.
  **/
 gpointer
 gnome_keyring_find_items  (GnomeKeyringItemType                  type,
@@ -2687,8 +2609,6 @@ make_attribute_list_va (va_list args)
  *
  * Return value: (transfer none): The asynchronous request, which can be passed
  * to gnome_keyring_cancel_request().
- *
- * Deprecated: Use secret_password_lookup() or secret_service_search() instead.
  **/
 gpointer
 gnome_keyring_find_itemsv (GnomeKeyringItemType                  type,
@@ -2733,8 +2653,6 @@ gnome_keyring_find_itemsv (GnomeKeyringItemType                  type,
  *
  * Return value: %GNOME_KEYRING_RESULT_OK if the operation was succcessful or
  * an error result otherwise.
- *
- * Deprecated: Use secret_password_lookup_sync() or secret_service_search_sync() instead.
  **/
 GnomeKeyringResult
 gnome_keyring_find_items_sync (GnomeKeyringItemType        type,
@@ -2776,8 +2694,6 @@ gnome_keyring_find_items_sync (GnomeKeyringItemType        type,
  *
  * Return value: %GNOME_KEYRING_RESULT_OK if the operation was succcessful or
  * an error result otherwise.
- *
- * Deprecated: Use secret_password_lookup_sync() or secret_service_search_sync() instead.
  **/
 GnomeKeyringResult
 gnome_keyring_find_itemsv_sync  (GnomeKeyringItemType        type,
@@ -2805,10 +2721,6 @@ gnome_keyring_find_itemsv_sync  (GnomeKeyringItemType        type,
  * SECTION:gnome-keyring-items
  * @title: Keyring Items
  * @short_description: Keyring items each hold a secret and a number of attributes.
- *
- * <warning>All of these APIs are deprecated. Use
- * <ulink href="http://developer.gnome.org/libsecret/stable/">libsecret</ulink>
- * instead.</warning>
  *
  * A keyring contains multiple items. Each item has a secret, attributes and access
  * information associated with it.
@@ -3219,8 +3131,6 @@ item_create_start (const char *keyring, GnomeKeyringItemType type, const char *d
  *
  * Return value: (transfer none): The asynchronous request, which can be passed
  * to gnome_keyring_cancel_request().
- *
- * Deprecated: Use secret_password_store() or secret_item_create() instead.
  **/
 gpointer
 gnome_keyring_item_create (const char                          *keyring,
@@ -3270,8 +3180,6 @@ gnome_keyring_item_create (const char                          *keyring,
  *
  * Return value: %GNOME_KEYRING_RESULT_OK if the operation was succcessful or
  * an error result otherwise.
- *
- * Deprecated: Use secret_password_store_sync() or secret_item_create_sync() instead.
  */
 GnomeKeyringResult
 gnome_keyring_item_create_sync (const char                                 *keyring,
@@ -3328,8 +3236,6 @@ item_delete_start (const char *keyring, guint32 id, GnomeKeyringOperationDoneCal
  *
  * Return value: (transfer none): The asynchronous request, which can be passed
  * to gnome_keyring_cancel_request().
- *
- * Deprecated: Use secret_password_clear() or secret_item_delete() instead.
  **/
 gpointer
 gnome_keyring_item_delete (const char                                 *keyring,
@@ -3361,8 +3267,6 @@ gnome_keyring_item_delete (const char                                 *keyring,
  *
  * Return value: %GNOME_KEYRING_RESULT_OK if the operation was succcessful or
  * an error result otherwise.
- *
- * Deprecated: Use secret_password_clear_sync() or secret_item_delete_sync() instead.
  **/
 GnomeKeyringResult
 gnome_keyring_item_delete_sync (const char *keyring,
@@ -3397,8 +3301,6 @@ gnome_keyring_item_delete_sync (const char *keyring,
  *
  * Return value: (transfer none): The asynchronous request, which can be passed
  * to gnome_keyring_cancel_request().
- *
- * Deprecated: Use #SecretItem objects instead.
  **/
 gpointer
 gnome_keyring_item_get_info (const char                                 *keyring,
@@ -3432,8 +3334,6 @@ gnome_keyring_item_get_info (const char                                 *keyring
  *
  * Return value: %GNOME_KEYRING_RESULT_OK if the operation was succcessful or
  * an error result otherwise.
- *
- * Deprecated: Use #SecretItem objects instead.
  **/
 GnomeKeyringResult
 gnome_keyring_item_get_info_sync (const char            *keyring,
@@ -3645,8 +3545,6 @@ item_get_info_start (const char *keyring, guint32 id, guint32 flags,
  *
  * Return value: (transfer none): The asynchronous request, which can be passed
  * to gnome_keyring_cancel_request().
- *
- * Deprecated: Use #SecretItem objects instead.
  **/
 gpointer
 gnome_keyring_item_get_info_full (const char                                 *keyring,
@@ -3686,8 +3584,6 @@ gnome_keyring_item_get_info_full (const char                                 *ke
  *
  * Return value: %GNOME_KEYRING_RESULT_OK if the operation was succcessful or
  * an error result otherwise.
- *
- * Deprecated: Use #SecretItem objects instead.
  **/
 GnomeKeyringResult
 gnome_keyring_item_get_info_full_sync (const char              *keyring,
@@ -3854,8 +3750,6 @@ item_set_info_start (const char *keyring, guint32 id, GnomeKeyringItemInfo *info
  *
  * Return value: (transfer none): The asynchronous request, which can be passed
  * to gnome_keyring_cancel_request().
- *
- * Deprecated: Use #SecretItem objects instead.
  **/
 gpointer
 gnome_keyring_item_set_info (const char                                 *keyring,
@@ -3889,8 +3783,6 @@ gnome_keyring_item_set_info (const char                                 *keyring
  *
  * Return value: %GNOME_KEYRING_RESULT_OK if the operation was succcessful or
  * an error result otherwise.
- *
- * Deprecated: Use #SecretItem objects instead.
  **/
 GnomeKeyringResult
 gnome_keyring_item_set_info_sync (const char           *keyring,
@@ -3976,8 +3868,6 @@ item_get_attributes_start (const char *keyring, guint32 id,
  *
  * Return value: (transfer none): The asynchronous request, which can be passed
  * to gnome_keyring_cancel_request().
- *
- * Deprecated: Use secret_item_get_attributes() instead.
  **/
 gpointer
 gnome_keyring_item_get_attributes (const char                                 *keyring,
@@ -4012,8 +3902,6 @@ gnome_keyring_item_get_attributes (const char                                 *k
  *
  * Return value: %GNOME_KEYRING_RESULT_OK if the operation was succcessful or
  * an error result otherwise.
- *
- * Deprecated: Use secret_item_get_attributes() instead.
  **/
 GnomeKeyringResult
 gnome_keyring_item_get_attributes_sync (const char                 *keyring,
@@ -4098,8 +3986,6 @@ item_set_attributes_start (const char *keyring, guint32 id, GnomeKeyringAttribut
  *
  * Return value: (transfer none): The asynchronous request, which can be passed
  * to gnome_keyring_cancel_request().
- *
- * Deprecated: Use secret_item_set_attributes() instead.
  **/
 gpointer
 gnome_keyring_item_set_attributes (const char                                 *keyring,
@@ -4131,8 +4017,6 @@ gnome_keyring_item_set_attributes (const char                                 *k
  *
  * Return value: %GNOME_KEYRING_RESULT_OK if the operation was succcessful or
  * an error result otherwise.
- *
- * Deprecated: Use secret_item_set_attributes_sync() instead.
  **/
 GnomeKeyringResult
 gnome_keyring_item_set_attributes_sync (const char                *keyring,
@@ -4336,10 +4220,6 @@ gnome_keyring_item_grant_access_rights_sync (const char                   *keyri
  * @title: Network Passwords
  * @short_description: Saving of network passwords.
  *
- * <warning>All of these APIs are deprecated. Use
- * <ulink href="http://developer.gnome.org/libsecret/stable/">libsecret</ulink>
- * instead.</warning>
- *
  * Networks passwords are a simple way of saving passwords associated with a
  * certain user/server/protocol and other fields.
  *
@@ -4353,8 +4233,6 @@ gnome_keyring_item_grant_access_rights_sync (const char                   *keyri
  *
  * Free a network password data pointer. If %NULL is passed in,
  * nothing happens.
- *
- * Deprecated: Not used with libsecret.
  **/
 void
 gnome_keyring_network_password_free (GnomeKeyringNetworkPasswordData *data)
@@ -4380,8 +4258,6 @@ gnome_keyring_network_password_free (GnomeKeyringNetworkPasswordData *data)
  *        #GnomeKeyringNetworkPasswordData pointers.
  *
  * Free a list of network password data.
- *
- * Deprecated: Not used with libsecret.
  **/
 void
 gnome_keyring_network_password_list_free (GList *list)
@@ -4533,8 +4409,6 @@ find_network_password_start (const char *user, const char *domain, const char *s
  *
  * Return value: (transfer none): The asynchronous request, which can be passed
  * to gnome_keyring_cancel_request().
- *
- * Deprecated: Use secret_password_lookup() with %SECRET_SCHEMA_COMPAT_NETWORK.
  **/
 gpointer
 gnome_keyring_find_network_password      (const char                            *user,
@@ -4581,8 +4455,6 @@ gnome_keyring_find_network_password      (const char                            
  *
  * Return value: %GNOME_KEYRING_RESULT_OK if the operation was succcessful or
  * an error result otherwise.
- *
- * Deprecated: Use secret_password_lookup_sync() with %SECRET_SCHEMA_COMPAT_NETWORK.
  **/
 GnomeKeyringResult
 gnome_keyring_find_network_password_sync (const char                            *user,
@@ -4689,8 +4561,6 @@ set_network_password_start (const char *keyring, const char *user, const char *d
  *
  * Return value: (transfer none): The asynchronous request, which can be passed
  * to gnome_keyring_cancel_request().
- *
- * Deprecated: Use secret_password_store() with %SECRET_SCHEMA_COMPAT_NETWORK.
  **/
 gpointer
 gnome_keyring_set_network_password      (const char                            *keyring,
@@ -4740,8 +4610,6 @@ gnome_keyring_set_network_password      (const char                            *
  *
  * Return value: %GNOME_KEYRING_RESULT_OK if the operation was succcessful or
  * an error result otherwise.
- *
- * Deprecated: Use secret_password_store_sync() with %SECRET_SCHEMA_COMPAT_NETWORK.
  **/
 GnomeKeyringResult
 gnome_keyring_set_network_password_sync (const char                            *keyring,
@@ -4772,10 +4640,6 @@ gnome_keyring_set_network_password_sync (const char                            *
  * SECTION:gnome-keyring-password
  * @title: Simple Password Storage
  * @short_description: Store and lookup passwords with a set of attributes.
- *
- * <warning>All of these APIs are deprecated. Use
- * <ulink href="http://developer.gnome.org/libsecret/stable/">libsecret</ulink>
- * instead.</warning>
  *
  * This is a simple API for storing passwords and retrieving passwords in the keyring.
  *
@@ -4973,8 +4837,6 @@ store_password_filter (GnomeKeyringResult res, guint32 item_id, gpointer user_da
  * to gnome_keyring_cancel_request().
  *
  * Since: 2.22
- *
- * Deprecated: Use secret_password_store() instead.
  **/
 gpointer
 gnome_keyring_store_password (const GnomeKeyringPasswordSchema* schema, const gchar *keyring,
@@ -5032,8 +4894,6 @@ gnome_keyring_store_password (const GnomeKeyringPasswordSchema* schema, const gc
  * an error result otherwise.
  *
  * Since: 2.22
- *
- * Deprecated: Use secret_password_store_sync() instead.
  **/
 GnomeKeyringResult
 gnome_keyring_store_password_sync (const GnomeKeyringPasswordSchema* schema, const gchar *keyring,
@@ -5288,8 +5148,6 @@ find_password_va_start (const GnomeKeyringPasswordSchema* schema, va_list va,
  * to gnome_keyring_cancel_request().
  *
  * Since: 2.22
- *
- * Deprecated: Use secret_password_lookup() instead.
  **/
 gpointer
 gnome_keyring_find_password (const GnomeKeyringPasswordSchema* schema,
@@ -5320,8 +5178,6 @@ gnome_keyring_find_password (const GnomeKeyringPasswordSchema* schema,
  *
  * A found structure returned by a found operation. Use gnome_keyring_found_list_free()
  * to free a list of these structures.
- *
- * Deprecated: Not used with libsecret.
  */
 
 /**
@@ -5349,8 +5205,6 @@ gnome_keyring_find_password (const GnomeKeyringPasswordSchema* schema,
  * an error result otherwise.
  *
  * Since: 2.22
- *
- * Deprecated: Use secret_password_lookup_sync() instead.
  **/
 GnomeKeyringResult
 gnome_keyring_find_password_sync (const GnomeKeyringPasswordSchema* schema,
@@ -5436,8 +5290,6 @@ delete_password_va_start (const GnomeKeyringPasswordSchema* schema, va_list va,
  * to gnome_keyring_cancel_request().
  *
  * Since: 2.22
- *
- * Deprecated: Use secret_password_clear() instead.
  **/
 gpointer
 gnome_keyring_delete_password (const GnomeKeyringPasswordSchema* schema,
@@ -5482,8 +5334,6 @@ gnome_keyring_delete_password (const GnomeKeyringPasswordSchema* schema,
  * an error result otherwise.
  *
  * Since: 2.22
- *
- * Deprecated: Use secret_password_clear_sync() instead.
  **/
 GnomeKeyringResult
 gnome_keyring_delete_password_sync (const GnomeKeyringPasswordSchema* schema, ...)

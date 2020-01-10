@@ -1,4 +1,4 @@
-AC_INIT([libgnome-keyring], [3.12.0])
+AC_INIT([libgnome-keyring], [3.8.0])
 AC_CONFIG_SRCDIR([library/gnome-keyring.h])
 AM_INIT_AUTOMAKE([tar-ustar])
 AC_CONFIG_MACRO_DIR([build/m4])
@@ -208,11 +208,15 @@ AC_ARG_ENABLE(strict, [
 AC_MSG_CHECKING([build strict])
 
 if test "$enable_strict" = "yes"; then
-	CFLAGS="$CFLAGS -Werror"
+	CFLAGS="$CFLAGS -Werror \
+		-DGTK_DISABLE_DEPRECATED \
+		-DGDK_DISABLE_DEPRECATED \
+		-DG_DISABLE_DEPRECATED \
+		-DGDK_PIXBUF_DISABLE_DEPRECATED"
 	TEST_MODE="thorough"
 	INTROSPECTION_FLAGS="--warn-error"
 	AC_DEFINE_UNQUOTED(WITH_STRICT, 1, [More strict checks])
-	strict_status="yes (-Werror, thorough tests, fatals)"
+	strict_status="yes (-Werror, thorough tests, fatals, no deprecations)"
 else
 	TEST_MODE="quick"
 	INTROSPECTION_FLAGS=""
@@ -223,34 +227,6 @@ AC_MSG_RESULT($strict_status)
 
 AC_SUBST(INTROSPECTION_FLAGS)
 AC_SUBST(TEST_MODE)
-
-AC_MSG_CHECKING([whether to build with gcov testing])
-AC_ARG_ENABLE([coverage],
-		[AS_HELP_STRING([--enable-coverage], [Whether to enable coverage testing ])],
-		[],
-		[enable_coverage=no])
-
-AC_MSG_RESULT([$enable_coverage])
-
-AC_MSG_CHECKING([code coverage])
-
-if test "$enable_coverage" = "yes"; then
-	if test "$GCC" != "yes"; then
-		AC_MSG_ERROR(Coverage testing requires GCC)
-	fi
-
-	AC_PATH_PROG(GCOV, gcov, no)
-	if test "$GCOV" = "no" ; then
-		AC_MSG_ERROR(gcov tool is not available)
-	fi
-
-	CFLAGS="$CFLAGS -O0 -g --coverage"
-	LDFLAGS="$LDFLAGS --coverage"
-fi
-
-AM_CONDITIONAL([WITH_COVERAGE], [test "$enable_coverage" = "yes"])
-
-AC_MSG_RESULT($enable_coverage)
 
 # ----------------------------------------------------------------------
 # Status
@@ -284,5 +260,4 @@ echo "  Introspection:        $found_introspection"
 echo "  Vala:                 $enable_vala"
 echo "  Debug Build:          $debug_status"
 echo "  Strict Build:         $strict_status"
-echo "  Code Coverage:        $enable_coverage"
 echo

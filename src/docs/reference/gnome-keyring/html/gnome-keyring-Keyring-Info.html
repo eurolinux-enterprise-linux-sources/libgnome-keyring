@@ -3,12 +3,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Keyring Info</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<meta name="generator" content="DocBook XSL Stylesheets V1.77.1">
 <link rel="home" href="index.html" title="gnome-keyring Reference Manual">
 <link rel="up" href="ch01.html" title="gnome-keyring API Reference">
 <link rel="prev" href="gnome-keyring-Keyrings.html" title="Keyrings">
 <link rel="next" href="gnome-keyring-Keyring-Items.html" title="Keyring Items">
-<meta name="generator" content="GTK-Doc V1.19 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -54,14 +54,6 @@
 <div class="refsect1">
 <a name="gnome-keyring-Keyring-Info.description"></a><h2>Description</h2>
 <p>
-</p>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>All of these APIs are deprecated. Use
-<a class="ulink" href="" target="_top">libsecret</a>
-instead.</div>
-<p>
-</p>
-<p>
 Use <a class="link" href="gnome-keyring-Keyrings.html#gnome-keyring-get-info" title="gnome_keyring_get_info ()"><code class="function">gnome_keyring_get_info()</code></a> or <a class="link" href="gnome-keyring-Keyrings.html#gnome-keyring-get-info-sync" title="gnome_keyring_get_info_sync ()"><code class="function">gnome_keyring_get_info_sync()</code></a> to get a <a class="link" href="gnome-keyring-Keyring-Info.html#GnomeKeyringInfo" title="GnomeKeyringInfo"><span class="type">GnomeKeyringInfo</span></a>
 pointer to use with these functions.
 </p>
@@ -72,10 +64,6 @@ pointer to use with these functions.
 <a name="GnomeKeyringInfo"></a><h3>GnomeKeyringInfo</h3>
 <pre class="programlisting">typedef struct GnomeKeyringInfo GnomeKeyringInfo;
 </pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">GnomeKeyringInfo</code> is deprecated and should not be used in newly-written code.</p>
-</div>
 <p>
 </p>
 </div>
@@ -83,10 +71,6 @@ pointer to use with these functions.
 <div class="refsect2">
 <a name="gnome-keyring-info-free"></a><h3>gnome_keyring_info_free ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>                gnome_keyring_info_free             (<em class="parameter"><code><a class="link" href="gnome-keyring-Keyring-Info.html#GnomeKeyringInfo" title="GnomeKeyringInfo"><span class="type">GnomeKeyringInfo</span></a> *keyring_info</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_info_free</code> is deprecated and should not be used in newly-written code. Use <span class="type">SecretCollection</span> objects instead.</p>
-</div>
 <p>
 Free a <a class="link" href="gnome-keyring-Keyring-Info.html#GnomeKeyringInfo" title="GnomeKeyringInfo"><span class="type">GnomeKeyringInfo</span></a> object. If a <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> pointer is passed
 nothing occurs.
@@ -106,10 +90,6 @@ nothing occurs.
 <div class="refsect2">
 <a name="gnome-keyring-info-copy"></a><h3>gnome_keyring_info_copy ()</h3>
 <pre class="programlisting"><a class="link" href="gnome-keyring-Keyring-Info.html#GnomeKeyringInfo" title="GnomeKeyringInfo"><span class="returnvalue">GnomeKeyringInfo</span></a> *  gnome_keyring_info_copy             (<em class="parameter"><code><a class="link" href="gnome-keyring-Keyring-Info.html#GnomeKeyringInfo" title="GnomeKeyringInfo"><span class="type">GnomeKeyringInfo</span></a> *keyring_info</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_info_copy</code> is deprecated and should not be used in newly-written code. Use <span class="type">SecretCollection</span> objects instead.</p>
-</div>
 <p>
 Copy a <a class="link" href="gnome-keyring-Keyring-Info.html#GnomeKeyringInfo" title="GnomeKeyringInfo"><span class="type">GnomeKeyringInfo</span></a> object.
 </p>
@@ -137,10 +117,6 @@ Copy a <a class="link" href="gnome-keyring-Keyring-Info.html#GnomeKeyringInfo" t
 <a name="gnome-keyring-info-set-lock-on-idle"></a><h3>gnome_keyring_info_set_lock_on_idle ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>                gnome_keyring_info_set_lock_on_idle (<em class="parameter"><code><a class="link" href="gnome-keyring-Keyring-Info.html#GnomeKeyringInfo" title="GnomeKeyringInfo"><span class="type">GnomeKeyringInfo</span></a> *keyring_info</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_info_set_lock_on_idle</code> is deprecated and should not be used in newly-written code. Not supported when using libsecret.</p>
-</div>
 <p>
 Set whether or not to lock a keyring after a certain amount of idle time.
 </p>
@@ -168,10 +144,6 @@ See also <a class="link" href="gnome-keyring-Keyring-Info.html#gnome-keyring-inf
 <div class="refsect2">
 <a name="gnome-keyring-info-get-lock-on-idle"></a><h3>gnome_keyring_info_get_lock_on_idle ()</h3>
 <pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gnome_keyring_info_get_lock_on_idle (<em class="parameter"><code><a class="link" href="gnome-keyring-Keyring-Info.html#GnomeKeyringInfo" title="GnomeKeyringInfo"><span class="type">GnomeKeyringInfo</span></a> *keyring_info</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_info_get_lock_on_idle</code> is deprecated and should not be used in newly-written code. Not supported when using libsecret.</p>
-</div>
 <p>
 Get whether or not to lock a keyring after a certain amount of idle time.
 </p>
@@ -200,10 +172,6 @@ See also <a class="link" href="gnome-keyring-Keyring-Info.html#gnome-keyring-inf
 <a name="gnome-keyring-info-set-lock-timeout"></a><h3>gnome_keyring_info_set_lock_timeout ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>                gnome_keyring_info_set_lock_timeout (<em class="parameter"><code><a class="link" href="gnome-keyring-Keyring-Info.html#GnomeKeyringInfo" title="GnomeKeyringInfo"><span class="type">GnomeKeyringInfo</span></a> *keyring_info</code></em>,
                                                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> value</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_info_set_lock_timeout</code> is deprecated and should not be used in newly-written code. Not supported when using libsecret.</p>
-</div>
 <p>
 Set the idle timeout, in seconds, after which to lock the keyring.
 </p>
@@ -231,10 +199,6 @@ See also <a class="link" href="gnome-keyring-Keyring-Info.html#gnome-keyring-inf
 <div class="refsect2">
 <a name="gnome-keyring-info-get-lock-timeout"></a><h3>gnome_keyring_info_get_lock_timeout ()</h3>
 <pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint32"><span class="returnvalue">guint32</span></a>             gnome_keyring_info_get_lock_timeout (<em class="parameter"><code><a class="link" href="gnome-keyring-Keyring-Info.html#GnomeKeyringInfo" title="GnomeKeyringInfo"><span class="type">GnomeKeyringInfo</span></a> *keyring_info</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_info_get_lock_timeout</code> is deprecated and should not be used in newly-written code. Not supported when using libsecret.</p>
-</div>
 <p>
 Get the idle timeout, in seconds, after which to lock the keyring.
 </p>
@@ -262,10 +226,6 @@ See also <a class="link" href="gnome-keyring-Keyring-Info.html#gnome-keyring-inf
 <div class="refsect2">
 <a name="gnome-keyring-info-get-mtime"></a><h3>gnome_keyring_info_get_mtime ()</h3>
 <pre class="programlisting"><span class="returnvalue">time_t</span>              gnome_keyring_info_get_mtime        (<em class="parameter"><code><a class="link" href="gnome-keyring-Keyring-Info.html#GnomeKeyringInfo" title="GnomeKeyringInfo"><span class="type">GnomeKeyringInfo</span></a> *keyring_info</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_info_get_mtime</code> is deprecated and should not be used in newly-written code. Use <code class="function">secret_collection_get_modified()</code> instead.</p>
-</div>
 <p>
 Get the time at which the keyring was last modified.
 </p>
@@ -290,10 +250,6 @@ Get the time at which the keyring was last modified.
 <div class="refsect2">
 <a name="gnome-keyring-info-get-ctime"></a><h3>gnome_keyring_info_get_ctime ()</h3>
 <pre class="programlisting"><span class="returnvalue">time_t</span>              gnome_keyring_info_get_ctime        (<em class="parameter"><code><a class="link" href="gnome-keyring-Keyring-Info.html#GnomeKeyringInfo" title="GnomeKeyringInfo"><span class="type">GnomeKeyringInfo</span></a> *keyring_info</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_info_get_ctime</code> is deprecated and should not be used in newly-written code. Use <code class="function">secret_collection_get_created()</code> instead.</p>
-</div>
 <p>
 Get the time at which the keyring was created.
 </p>
@@ -318,10 +274,6 @@ Get the time at which the keyring was created.
 <div class="refsect2">
 <a name="gnome-keyring-info-get-is-locked"></a><h3>gnome_keyring_info_get_is_locked ()</h3>
 <pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gnome_keyring_info_get_is_locked    (<em class="parameter"><code><a class="link" href="gnome-keyring-Keyring-Info.html#GnomeKeyringInfo" title="GnomeKeyringInfo"><span class="type">GnomeKeyringInfo</span></a> *keyring_info</code></em>);</pre>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p><code class="literal">gnome_keyring_info_get_is_locked</code> is deprecated and should not be used in newly-written code. Use <code class="function">secret_collection_get_locked()</code> instead.</p>
-</div>
 <p>
 Get whether the keyring is locked or not.
 </p>
@@ -346,6 +298,6 @@ Get whether the keyring is locked or not.
 </div>
 <div class="footer">
 <hr>
-          Generated by GTK-Doc V1.19</div>
+          Generated by GTK-Doc V1.18</div>
 </body>
 </html>
