@@ -5,7 +5,7 @@
 Summary: Framework for managing passwords and other secrets
 Name: libgnome-keyring
 Version: 3.8.0
-Release: 1%{?dist}
+Release: 3%{?dist}
 License: GPLv2+ and LGPLv2+
 Group: System Environment/Libraries
 #VCS: git:git://git.gnome.org/libgnome-keyring
@@ -77,6 +77,12 @@ rm $RPM_BUILD_ROOT%{_libdir}/*.la
 
 
 %changelog
+* Fri Jan 24 2014 Daniel Mach <dmach@redhat.com> - 3.8.0-3
+- Mass rebuild 2014-01-24
+
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 3.8.0-2
+- Mass rebuild 2013-12-27
+
 * Tue Mar 26 2013 Kalev Lember <kalevlember@gmail.com> - 3.8.0-1
 - Update to 3.8.0
 
